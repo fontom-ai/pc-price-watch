@@ -1,0 +1,218 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>はじめての自作PC：必要なパーツと選ぶ順番 | PCパーツ底値ウォッチ</title>
+<meta name="description" content="自作PCに必要な8つのパーツと、失敗しにくい選ぶ順番をまとめました。互換性で注意する点も解説します。"><link rel="canonical" href="https://fontom-ai.github.io/pc-price-watch/guides/first-build.html"><meta property="og:title" content="はじめての自作PC：必要なパーツと選ぶ順番 | PCパーツ底値ウォッチ"><meta property="og:type" content="website"><meta property="og:description" content="自作PCに必要な8つのパーツと、失敗しにくい選ぶ順番をまとめました。互換性で注意する点も解説します。"><meta property="og:url" content="https://fontom-ai.github.io/pc-price-watch/guides/first-build.html">
+<link rel="alternate" type="application/atom+xml" title="値下がり情報" href="../feed.xml">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#14161a;--muted:#5f6670;--line:#e4e7ec;--soft:#f1f3f6;
+--buy:#e8590c;--buy-fg:#fff;--buy-hover:#c94a06;--good:#0b7a53;--good-bg:#e3f5ec;--bad:#b42318;
+--info:#1d4ed8;--info-bg:#e8efff;--pt:#9a3412;--pt-bg:#fff1e6;--pr:#7a5b00;--pr-bg:#fff7db}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#181b21;--fg:#eceef2;--muted:#9aa3ae;
+--line:#2a2f37;--soft:#20242b;--buy:#f76707;--buy-hover:#ff7a1a;--good:#4ade80;--good-bg:#12301f;
+--bad:#f87171;--info:#93b4ff;--info-bg:#18223a;--pt:#fdba74;--pt-bg:#3a2210;--pr:#f3d57a;--pr-bg:#332a0c}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
+main{max-width:1080px;margin:0 auto;padding:0 16px 24px}a{color:var(--info)}
+.hero{padding:18px 0 4px}.hero h1{font-size:24px;line-height:1.3;margin:0 0 4px}
+.hero p{margin:0;color:var(--muted)}.trust{font-size:12px;color:var(--muted);margin:6px 0 0}
+.nav{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;gap:8px;overflow-x:auto}
+.nav a{flex:0 0 auto;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);
+border-radius:99px;padding:6px 14px;font-size:14px}.nav a:hover{border-color:var(--buy)}
+h2{font-size:18px;margin:26px 0 12px;scroll-margin-top:60px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;
+flex-direction:column;gap:10px;scroll-margin-top:60px}.card.pick{border:2px solid var(--buy)}
+.top{display:flex;gap:12px;align-items:flex-start}.thumb{width:88px;height:88px;flex:0 0 88px;border-radius:10px;
+background:#fff;border:1px solid var(--line);object-fit:contain}
+.kind{font-size:12px;color:var(--muted);margin:0}.title{font-size:15px;font-weight:700;margin:2px 0 0;line-height:1.4}
+.title a{color:var(--fg);text-decoration:none}.item{font-size:12.5px;color:var(--muted);margin:4px 0 0;
+display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.price{font-size:28px;font-weight:800;letter-spacing:-.01em;font-variant-numeric:tabular-nums;line-height:1.1}
+.price small{font-size:13px;font-weight:500;color:var(--muted);margin-left:6px}
+.badges{display:flex;flex-wrap:wrap;gap:6px}.b{font-size:12px;border-radius:6px;padding:2px 8px;font-weight:600}
+.b.good{color:var(--good);background:var(--good-bg)}.b.bad{color:var(--bad);background:var(--soft)}
+.b.info{color:var(--info);background:var(--info-bg)}.b.pt{color:var(--pt);background:var(--pt-bg)}
+.b.muted{color:var(--muted);background:var(--soft);font-weight:500}
+.buy{display:block;text-align:center;text-decoration:none;background:var(--buy);color:var(--buy-fg);
+font-weight:700;font-size:16px;border-radius:10px;padding:12px}.buy:hover{background:var(--buy-hover)}
+.buy span{display:block;font-size:12px;font-weight:500;opacity:.9}
+details{border-top:1px solid var(--line);padding-top:8px}summary{cursor:pointer;font-size:13px;color:var(--info)}
+.alt{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:6px}
+.alt a{display:flex;justify-content:space-between;gap:10px;text-decoration:none;color:var(--fg);
+background:var(--soft);border-radius:8px;padding:8px 10px;font-size:13px}.alt a:hover{outline:1px solid var(--buy)}
+.alt b{font-variant-numeric:tabular-nums;white-space:nowrap}.meta{font-size:12px;color:var(--muted)}
+svg{display:block;width:100%;height:140px;color:var(--good);background:var(--card);border-radius:10px}
+.pr{display:inline-block;background:var(--pr-bg);color:var(--pr);border-radius:8px;padding:3px 10px;font-size:12px;margin:8px 0 0}
+.followbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:28px 0 0}
+.followbox p{margin:0;font-weight:700}
+.follow{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}.follow a{font-size:13px;text-decoration:none;
+border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:99px;padding:5px 12px}
+.empty{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;background:var(--card)}
+td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:right}td:first-child,th:first-child{text-align:left}
+.verdict{border-radius:12px;padding:12px 14px;font-weight:600;margin:14px 0 0}
+.verdict.good{background:var(--good-bg);color:var(--good)}.verdict.muted{background:var(--soft);color:var(--muted)}
+footer{color:var(--muted);font-size:12px;margin:40px 0 0;border-top:1px solid var(--line);padding-top:12px}
+.topbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line)}
+.topbar .brand{font-weight:800;color:var(--fg);text-decoration:none;margin-right:auto}
+.topbar a.m{color:var(--fg);text-decoration:none;font-size:14px}.topbar a.m:hover{color:var(--buy)}
+.enter{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0 4px}
+.enter a{display:block;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);
+border-radius:14px;padding:14px}.enter a:hover{border-color:var(--buy)}.enter b{display:block;font-size:16px}
+.enter span{font-size:13px;color:var(--muted)}
+article.doc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;line-height:1.85}
+article.doc h2{margin-top:28px}article.doc table{margin:10px 0}article.doc li{margin:4px 0}
+.build{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 16px}
+.build h2{margin:0 0 4px}.total{font-size:30px;font-weight:800;margin:6px 0}.build td a{font-size:12px}
+.build td small{color:var(--muted)}.up{color:var(--bad)}.down{color:var(--good)}
+@media (max-width:520px){.hero h1{font-size:20px}.hero>p:first-of-type{font-size:13px}.price{font-size:26px}
+.grid{grid-template-columns:1fr}.nav{padding:8px 0}}
+</style><script data-goatcounter="https://pcpricewatch.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head><body><main>
+<header class="topbar"><a class="brand" href="../">PCパーツ底値ウォッチ</a>
+<a class="m" href="../">価格比較</a><a class="m" href="../builds.html">予算別構成</a>
+<a class="m" href="../guides/">ガイド</a><a class="m" href="../market.html">週間相場</a></header>
+<div class="hero"><p class="meta"><a href="./">← ガイド一覧</a></p><h1>はじめての自作PC：必要なパーツと選ぶ順番</h1>
+<p>自作PCに必要な8つのパーツと、失敗しにくい選ぶ順番をまとめました。互換性で注意する点も解説します。</p><p class="pr">【PR】本ページはアフィリエイト広告を利用しています</p></div>
+<article class="doc"><p>自作PCは、決まった8種類のパーツを組み合わせて作ります。一見むずかしそうですが、<strong>選ぶ順番</strong>を守れば、互換性（パーツ同士が組み合わせられるか）の失敗はほとんど防げます。</p>
+<h2>必要なパーツは8つ</h2>
+<table>
+<thead>
+<tr>
+<th>パーツ</th>
+<th>役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>計算の中心。性能とソケット（差し込み口の形）を決める</td>
+</tr>
+<tr>
+<td>マザーボード</td>
+<td>すべてのパーツをつなぐ基板。CPUのソケットに合わせる</td>
+</tr>
+<tr>
+<td>メモリ</td>
+<td>作業中のデータを置く場所。今はDDR5が主流</td>
+</tr>
+<tr>
+<td>ストレージ（SSD）</td>
+<td>OSやゲームを保存する。NVMe接続のM.2 SSDが標準</td>
+</tr>
+<tr>
+<td>グラフィックボード</td>
+<td>ゲームや画像処理の要。予算配分がいちばん大きい</td>
+</tr>
+<tr>
+<td>電源ユニット</td>
+<td>全体に電気を送る。グラボに合わせて容量を決める</td>
+</tr>
+<tr>
+<td>PCケース</td>
+<td>箱。グラボの長さとマザーボードの大きさが入るか確認</td>
+</tr>
+<tr>
+<td>CPUクーラー</td>
+<td>CPUを冷やす。CPUに付属しないモデルも多い</td>
+</tr>
+</tbody>
+</table>
+<h2>選ぶ順番</h2>
+<ol>
+<li><strong>用途と予算を決める</strong>：フルHDでゲーム、配信もしたい、動画編集…など。</li>
+<li><strong>CPUとグラボを決める</strong>：性能の大部分はこの2つで決まります。</li>
+<li><strong>CPUに合うマザーボード</strong>：Ryzen 9000シリーズは「AM5」、Core Ultra 200Sは「LGA1851」です。ソケットが違うと物理的に取り付けられません。</li>
+<li><strong>メモリとSSD</strong>：今のCPUはどちらもDDR5対応です。メモリは同じ容量の2枚組を選びましょう。</li>
+<li><strong>電源</strong>：グラボメーカーが公表している推奨電源容量を目安に、少し余裕を持たせます。</li>
+<li><strong>ケースとクーラー</strong>：グラボの長さ・クーラーの高さがケースに収まるかを確認します。</li>
+</ol>
+<h2>よくある失敗</h2>
+<ul>
+<li><strong>マザーボードのBIOSが古い</strong>：B650マザーボードでRyzen 9000を使う場合、発売時期によってはBIOS更新が必要です。購入前にメーカーのCPU対応表を確認してください。</li>
+<li><strong>CPUクーラーを買い忘れる</strong>：Ryzen 7 9800X3DやCore Ultra 7 265Kにはクーラーが付属しません。</li>
+<li><strong>メモリを1枚だけ買う</strong>：2枚組にすると「デュアルチャネル」で動き、性能を引き出せます。</li>
+</ul>
+<p>各パーツの今の最安値は下にまとめています。組み合わせ例は「予算別おすすめ構成」のページも参考にしてください。</p><p class="meta">公開日 2026-09-27</p></article>
+<h2>この記事で紹介したパーツの最安値</h2><div class="grid"><article class="card" id="ryzen5-9600x">
+<div class="top"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/noah-shopping/cabinet/default/k0001630333.jpg?_ex=240x240" alt="Ryzen 5 9600X" loading="lazy" width="88" height="88"><div><p class="kind">CPU</p>
+<p class="title"><a href="../p/ryzen5-9600x.html">Ryzen 5 9600X</a></p>
+<p class="item">AMD Ryzen 5 9600X BOX</p></div></div>
+<div class="price">¥35,080</div>
+<div class="badges"><span class="b info">送料無料</span></div>
+<a class="buy" href="https://hb.afl.rakuten.co.jp/hgc/g00u3gvo.dvi7d4da.g00u3gvo.dvi7e9d6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnoah-shopping%2F0730143315609%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fnoah-shopping%2Fi%2F10002713%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ryzen5-9600x/rakuten" data-goatcounter-title="Ryzen 5 9600X">楽天市場で見る →<span>ノア商社 楽天市場店</span></a>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fnoahshoping%2F0730143315609.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ryzen5-9600x/yahoo" data-goatcounter-title="Ryzen 5 9600X"><span>ノア商社Yahoo!店（Yahoo!ショッピング） ・送料無料</span><b>¥35,280</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00uagro.dvi7dfc2.g00uagro.dvi7e29a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpsidekick%2F0730143315609%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fpsidekick%2Fi%2F10000705%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ryzen5-9600x/rakuten" data-goatcounter-title="Ryzen 5 9600X"><span>ピーサイドキック 楽天市場店（楽天市場） ・送料無料</span><b>¥35,825</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ftopone1%2Fparts-0023.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ryzen5-9600x/yahoo" data-goatcounter-title="Ryzen 5 9600X"><span>トップワン ヤフーショッピング店（Yahoo!ショッピング） ・送料無料</span><b>¥36,780</b></a></li></ul></details>
+<div class="meta">価格推移を記録中 ・ 9/27 17:19時点 ・ <a href="../p/ryzen5-9600x.html">価格推移を見る</a></div>
+</article><article class="card" id="mb-b650">
+<div class="top"><img class="thumb" src="https://item-shopping.c.yimg.jp/i/g/tsukumo-y_4988755077279" alt="B650 マザーボード（AM5）" loading="lazy" width="88" height="88"><div><p class="kind">マザーボード</p>
+<p class="title"><a href="../p/mb-b650.html">B650 マザーボード（AM5）</a></p>
+<p class="item">BATTLE-AX B650M-T V14</p></div></div>
+<div class="price">¥14,646</div>
+<div class="badges"><span class="b info">送料無料</span></div>
+<a class="buy" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ftsukumo-y%2F4988755077279.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/mb-b650/yahoo" data-goatcounter-title="B650 マザーボード（AM5）">Yahoo!ショッピングで見る →<span>ツクモ パソコン Yahoo!店</span></a>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ftsukumo-y%2F4988755077255.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/mb-b650/yahoo" data-goatcounter-title="B650 マザーボード（AM5）"><span>ツクモ パソコン Yahoo!店（Yahoo!ショッピング） ・送料無料</span><b>¥14,949</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fitempost%2F1-pc4u-97591.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/mb-b650/yahoo" data-goatcounter-title="B650 マザーボード（AM5）"><span>shopooo by GMO（Yahoo!ショッピング） ・送料無料</span><b>¥15,980</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic522276%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10003846%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/mb-b650/rakuten" data-goatcounter-title="B650 マザーボード（AM5）"><span>ドスパラ楽天市場店（楽天市場） ・送料無料</span><b>¥16,980</b></a></li></ul></details>
+<div class="meta">価格推移を記録中 ・ 9/27 17:19時点 ・ <a href="../p/mb-b650.html">価格推移を見る</a></div>
+</article><article class="card" id="ddr5-32gb">
+<div class="top"><img class="thumb" src="https://item-shopping.c.yimg.jp/i/g/5-8_20260803-s-b09mts5yh1-01" alt="DDR5 32GB (16GB×2)" loading="lazy" width="88" height="88"><div><p class="kind">メモリ</p>
+<p class="title"><a href="../p/ddr5-32gb.html">DDR5 32GB (16GB×2)</a></p>
+<p class="item">CORSAIR VENGEANCE DDR5 メモリ 32GB（16GB×2）最大4800MHz対応 Intel XMP対応…</p></div></div>
+<div class="price">¥50,100<small>1,565.6円/GB</small></div>
+<div class="badges"><span class="b bad">前日比 ▲12,100円</span><span class="b info">送料無料</span></div>
+<a class="buy" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2F5-8%2F20260803-s-b09mts5yh1-01.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ddr5-32gb/yahoo" data-goatcounter-title="DDR5 32GB (16GB×2)">Yahoo!ショッピングで見る →<span>クラストストア</span></a>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00uqi8o.dvi7dec4.g00uqi8o.dvi7e93f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsakuraya-online%2Fb0c5kwv5g7%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsakuraya-online%2Fi%2F10033636%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ddr5-32gb/rakuten" data-goatcounter-title="DDR5 32GB (16GB×2)"><span>櫻屋オンライン楽天市場店（楽天市場）</span><b>¥57,870</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00u90ko.dvi7dc81.g00u90ko.dvi7e3db/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fiikakakustore%2Fx0014r0xir%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fiikakakustore%2Fi%2F10001739%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ddr5-32gb/rakuten" data-goatcounter-title="DDR5 32GB (16GB×2)"><span>いい価格デジタルストア（楽天市場） ・送料無料</span><b>¥59,800</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00t9eko.dvi7d00f.g00t9eko.dvi7e932/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbubushop%2F6976804630351%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fbubushop%2Fi%2F10004141%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ddr5-32gb/rakuten" data-goatcounter-title="DDR5 32GB (16GB×2)"><span>BUBUSHOP（楽天市場） ・送料無料</span><b>¥62,000</b></a></li></ul></details>
+<div class="meta">30日最安 ¥38,000 ・ 9/27 17:12時点 ・ <a href="../p/ddr5-32gb.html">価格推移を見る</a></div>
+</article><article class="card" id="nvme-1tb">
+<div class="top"><img class="thumb" src="https://item-shopping.c.yimg.jp/i/g/kb-shop_0203-012620" alt="NVMe SSD 1TB" loading="lazy" width="88" height="88"><div><p class="kind">SSD</p>
+<p class="title"><a href="../p/nvme-1tb.html">NVMe SSD 1TB</a></p>
+<p class="item">Verbatim バーベイタム NVMe PCIe Gen3.0x4 PCIe3.0 Vi3000シリーズ 1TB 最大読込…</p></div></div>
+<div class="price">¥20,250<small>20.2円/GB</small></div>
+<div class="badges"><span class="b good">30日最安</span><span class="b info">送料無料</span></div>
+<a class="buy" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fkb-shop%2F0203-012620.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/nvme-1tb/yahoo" data-goatcounter-title="NVMe SSD 1TB">Yahoo!ショッピングで見る →<span>KBショップ</span></a>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ffastonline%2Flnm610p001t-rnnng.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/nvme-1tb/yahoo" data-goatcounter-title="NVMe SSD 1TB"><span>SSD ストレージ専門店SUNEASTストア（Yahoo!ショッピング） ・送料無料</span><b>¥21,800</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjnhshop%2Fhy8113e26-1tbtn1-eb.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/nvme-1tb/yahoo" data-goatcounter-title="NVMe SSD 1TB"><span>嘉年華Shop（Yahoo!ショッピング） ・送料無料</span><b>¥21,880</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjnh%2Fhy8113e26-1tbtn1-eb.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/nvme-1tb/yahoo" data-goatcounter-title="NVMe SSD 1TB"><span>嘉年華（Yahoo!ショッピング） ・送料無料</span><b>¥21,881</b></a></li></ul></details>
+<div class="meta">30日最安 ¥20,250 ・ 9/27 17:13時点 ・ <a href="../p/nvme-1tb.html">価格推移を見る</a></div>
+</article><article class="card" id="rtx5060">
+<div class="top"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_gold/dospara-r/img/item/539273.jpg?_ex=240x240" alt="GeForce RTX 5060" loading="lazy" width="88" height="88"><div><p class="kind">GPU</p>
+<p class="title"><a href="../p/rtx5060.html">GeForce RTX 5060</a></p>
+<p class="item">Palit(パリット) GeForce RTX5060 WHITE OC / NE75060U19P1 / グラフィックボード</p></div></div>
+<div class="price">¥67,800</div>
+<div class="badges"><span class="b good">30日最安</span><span class="b info">送料無料</span></div>
+<a class="buy" href="https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic539273%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10003718%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5060/rakuten" data-goatcounter-title="GeForce RTX 5060">楽天市場で見る →<span>ドスパラ楽天市場店</span></a>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fdospara-y%2Fic539273.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5060/yahoo" data-goatcounter-title="GeForce RTX 5060"><span>ドスパラYahoo!店（Yahoo!ショッピング） ・送料無料</span><b>¥67,800</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic525590%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10003607%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5060/rakuten" data-goatcounter-title="GeForce RTX 5060"><span>ドスパラ楽天市場店（楽天市場） ・送料無料</span><b>¥69,800</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fdospara-y%2Fic525590.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5060/yahoo" data-goatcounter-title="GeForce RTX 5060"><span>ドスパラYahoo!店（Yahoo!ショッピング） ・送料無料</span><b>¥69,800</b></a></li></ul></details>
+<div class="meta">30日最安 ¥67,800 ・ 9/27 17:15時点 ・ <a href="../p/rtx5060.html">価格推移を見る</a></div>
+</article><article class="card" id="psu-750-gold">
+<div class="top"><img class="thumb" src="https://item-shopping.c.yimg.jp/i/g/suzuran7_suzuaygb-2dr-j8o" alt="電源 750W 80PLUS Gold" loading="lazy" width="88" height="88"><div><p class="kind">電源</p>
+<p class="title"><a href="../p/psu-750-gold.html">電源 750W 80PLUS Gold</a></p>
+<p class="item">1STPLAYER ACK Gold 750W 電源ユニット ATX 3.1 / PCI-E 5.1 対応 80PLUS Go…</p></div></div>
+<div class="price">¥11,383</div>
+<div class="badges"><span class="b info">送料無料</span></div>
+<a class="buy" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fsuzuran7%2Fsuzuaygb-2dr-j8o.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/psu-750-gold/yahoo" data-goatcounter-title="電源 750W 80PLUS Gold">Yahoo!ショッピングで見る →<span>すずらん</span></a>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00ucloo.dvi7db21.g00ucloo.dvi7e99f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Foktalers-shop%2Famz-b0cnwv28pb-u1%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Foktalers-shop%2Fi%2F10127764%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/psu-750-gold/rakuten" data-goatcounter-title="電源 750W 80PLUS Gold"><span>オクタラーズショップ（楽天市場） ・送料無料</span><b>¥11,741</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fitempost%2F1-pc4u-94713.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/psu-750-gold/yahoo" data-goatcounter-title="電源 750W 80PLUS Gold"><span>shopooo by GMO（Yahoo!ショッピング） ・送料無料</span><b>¥11,928</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00qfp9o.dvi7d2ce.g00qfp9o.dvi7eee3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fe-zoa%2Fitm0015901343%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fe-zoa%2Fi%2F10131455%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/psu-750-gold/rakuten" data-goatcounter-title="電源 750W 80PLUS Gold"><span>e-zoa 楽天市場 SHOP（楽天市場） ・送料無料</span><b>¥11,980</b></a></li></ul></details>
+<div class="meta">価格推移を記録中 ・ 9/27 17:19時点 ・ <a href="../p/psu-750-gold.html">価格推移を見る</a></div>
+</article><article class="card" id="case-midtower">
+<div class="top"><img class="thumb" src="https://item-shopping.c.yimg.jp/i/g/joshin_4537694402477-44-25392" alt="ミドルタワー PCケース" loading="lazy" width="88" height="88"><div><p class="kind">ケース</p>
+<p class="title"><a href="../p/case-midtower.html">ミドルタワー PCケース</a></p>
+<p class="item">DeepCool｜ディープクール ATX/ Micro-ATX/ Mini-ITX対応 ミドルタワーPCケース CC550 4…</p></div></div>
+<div class="price">¥5,500</div>
+<div class="badges"><span class="b info">送料無料</span></div>
+<a class="buy" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjoshin%2F4537694402477-44-25392.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/case-midtower/yahoo" data-goatcounter-title="ミドルタワー PCケース">Yahoo!ショッピングで見る →<span>Joshin web</span></a>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjoshin%2F4710343797975-44-25392.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/case-midtower/yahoo" data-goatcounter-title="ミドルタワー PCケース"><span>Joshin web（Yahoo!ショッピング） ・送料無料</span><b>¥5,556</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjoshin%2F4710343797982-44-25392.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/case-midtower/yahoo" data-goatcounter-title="ミドルタワー PCケース"><span>Joshin web（Yahoo!ショッピング） ・送料無料</span><b>¥5,556</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fpodpark%2F8809213769429.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/case-midtower/yahoo" data-goatcounter-title="ミドルタワー PCケース"><span>PodPark Yahoo!店（Yahoo!ショッピング） ・送料無料</span><b>¥5,640</b></a></li></ul></details>
+<div class="meta">価格推移を記録中 ・ 9/27 17:19時点 ・ <a href="../p/case-midtower.html">価格推移を見る</a></div>
+</article><article class="card" id="cooler-air">
+<div class="top"><img class="thumb" src="https://item-shopping.c.yimg.jp/i/g/excellar_1000033377" alt="空冷CPUクーラー（サイドフロー）" loading="lazy" width="88" height="88"><div><p class="kind">CPUクーラー</p>
+<p class="title"><a href="../p/cooler-air.html">空冷CPUクーラー（サイドフロー）</a></p>
+<p class="item">ID-COOLING 空冷CPUクーラー SE-904-XT BLACK ブラック 爆買</p></div></div>
+<div class="price">¥3,081</div>
+<div class="badges"><span class="b info">送料無料</span></div>
+<a class="buy" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fexcellar%2F1000033377.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-air/yahoo" data-goatcounter-title="空冷CPUクーラー（サイドフロー）">Yahoo!ショッピングで見る →<span>エクセラー</span></a>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00ur6fo.dvi7d0fc.g00ur6fo.dvi7eb8d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsmo-lab%2F00209%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsmo-lab%2Fi%2F10000206%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-air/rakuten" data-goatcounter-title="空冷CPUクーラー（サイドフロー）"><span>スモールラボ 楽天市場店（楽天市場） ・送料無料</span><b>¥3,980</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fgracejasmine%2Fwss-18tirdzjmrln.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-air/yahoo" data-goatcounter-title="空冷CPUクーラー（サイドフロー）"><span>Royall Velluto（Yahoo!ショッピング） ・送料無料</span><b>¥4,213</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00unm6o.dvi7dfd1.g00unm6o.dvi7e8d4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fshopevergreen%2F20250630202346_115%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fshopevergreen%2Fi%2F10081378%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-air/rakuten" data-goatcounter-title="空冷CPUクーラー（サイドフロー）"><span>shopevergreen（楽天市場） ・送料無料</span><b>¥4,401</b></a></li></ul></details>
+<div class="meta">価格推移を記録中 ・ 9/27 17:19時点 ・ <a href="../p/cooler-air.html">価格推移を見る</a></div>
+</article></div>
+<div class="followbox"><p>値下がりをいち早く知る</p><div class="follow"><a href="https://bsky.app/profile/fontom-watcher.bsky.social" rel="noopener">Blueskyで値下がり速報</a><a href="https://www.threads.com/@fal_philosophy" rel="noopener">Threadsで値下がり速報</a><a href="https://x.com/pcpartswatcher1" rel="noopener">X</a></div></div>
+<footer>
+<p>本ページはアフィリエイト広告（楽天アフィリエイト、バリューコマース）を利用しています。リンク先で購入されると運営者に紹介料が支払われますが、価格や掲載順には影響しません。</p>
+<p>表示価格は取得時点のもので、現在の価格・在庫・送料とは異なる場合があります。購入前に必ずリンク先のショップでご確認ください。条件（容量・型番など）で自動抽出しているため、まれに対象外の商品が含まれることがあります。</p>
+<p>過去の価格推移は日ごとの最安値のみを保存しています。アクセス解析にGoatCounter（Cookie不使用・個人を特定する情報は収集しません）を利用しています。</p>
+<p><a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener">Supported by Rakuten Developers</a>
+ ・ <a href="https://developer.yahoo.co.jp/sitemap/" target="_blank" rel="noopener">Webサービス by Yahoo! JAPAN</a>
+ ・ <a href="../feed.xml">RSS</a></p>
+<p></p>
+</footer></main></body></html>
