@@ -1,0 +1,141 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>自作PC構成シミュレーター（最新価格・互換性チェック）| PCパーツ底値ウォッチ</title>
+<meta name="description" content="CPU・グラボ・メモリなどを選ぶと、最新の最安値で合計金額とソケット・メモリ規格・電源容量の互換性をチェック。"><link rel="canonical" href="https://fontom-ai.github.io/pc-price-watch/simulator.html"><meta property="og:title" content="自作PC構成シミュレーター（最新価格・互換性チェック）| PCパーツ底値ウォッチ"><meta property="og:type" content="website"><meta property="og:description" content="CPU・グラボ・メモリなどを選ぶと、最新の最安値で合計金額とソケット・メモリ規格・電源容量の互換性をチェック。"><meta property="og:url" content="https://fontom-ai.github.io/pc-price-watch/simulator.html"><meta property="og:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png">
+<link rel="alternate" type="application/atom+xml" title="値下がり情報" href="feed.xml">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#14161a;--muted:#5f6670;--line:#e4e7ec;--soft:#f1f3f6;
+--buy:#e8590c;--buy-fg:#fff;--buy-hover:#c94a06;--good:#0b7a53;--good-bg:#e3f5ec;--bad:#b42318;
+--info:#1d4ed8;--info-bg:#e8efff;--pt:#9a3412;--pt-bg:#fff1e6;--pr:#7a5b00;--pr-bg:#fff7db}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#181b21;--fg:#eceef2;--muted:#9aa3ae;
+--line:#2a2f37;--soft:#20242b;--buy:#f76707;--buy-hover:#ff7a1a;--good:#4ade80;--good-bg:#12301f;
+--bad:#f87171;--info:#93b4ff;--info-bg:#18223a;--pt:#fdba74;--pt-bg:#3a2210;--pr:#f3d57a;--pr-bg:#332a0c}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
+main{max-width:1080px;margin:0 auto;padding:0 16px 24px}a{color:var(--info)}
+.hero{padding:18px 0 4px}.hero h1{font-size:24px;line-height:1.3;margin:0 0 4px}
+.hero p{margin:0;color:var(--muted)}.trust{font-size:12px;color:var(--muted);margin:6px 0 0}
+.nav{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;gap:8px;overflow-x:auto}
+.nav a{flex:0 0 auto;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);
+border-radius:99px;padding:6px 14px;font-size:14px}.nav a:hover{border-color:var(--buy)}
+h2{font-size:18px;margin:26px 0 12px;scroll-margin-top:60px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;
+flex-direction:column;gap:10px;scroll-margin-top:60px}.card.pick{border:2px solid var(--buy)}
+.top{display:flex;gap:12px;align-items:flex-start}.thumb{width:88px;height:88px;flex:0 0 88px;border-radius:10px;
+background:#fff;border:1px solid var(--line);object-fit:contain}
+.kind{font-size:12px;color:var(--muted);margin:0}.title{font-size:15px;font-weight:700;margin:2px 0 0;line-height:1.4}
+.title a{color:var(--fg);text-decoration:none}.item{font-size:12.5px;color:var(--muted);margin:4px 0 0;
+display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.price{font-size:28px;font-weight:800;letter-spacing:-.01em;font-variant-numeric:tabular-nums;line-height:1.1}
+.price small{font-size:13px;font-weight:500;color:var(--muted);margin-left:6px}
+.badges{display:flex;flex-wrap:wrap;gap:6px}.b{font-size:12px;border-radius:6px;padding:2px 8px;font-weight:600}
+.b.good{color:var(--good);background:var(--good-bg)}.b.bad{color:var(--bad);background:var(--soft)}
+.b.info{color:var(--info);background:var(--info-bg)}.b.pt{color:var(--pt);background:var(--pt-bg)}
+.b.muted{color:var(--muted);background:var(--soft);font-weight:500}
+.buy{display:block;text-align:center;text-decoration:none;background:var(--buy);color:var(--buy-fg);
+font-weight:700;font-size:16px;border-radius:10px;padding:12px}.buy:hover{background:var(--buy-hover)}
+.buy span{display:block;font-size:12px;font-weight:500;opacity:.9}
+details{border-top:1px solid var(--line);padding-top:8px}summary{cursor:pointer;font-size:13px;color:var(--info)}
+.alt{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:6px}
+.alt a{display:flex;justify-content:space-between;gap:10px;text-decoration:none;color:var(--fg);
+background:var(--soft);border-radius:8px;padding:8px 10px;font-size:13px}.alt a:hover{outline:1px solid var(--buy)}
+.alt b{font-variant-numeric:tabular-nums;white-space:nowrap}.meta{font-size:12px;color:var(--muted)}
+svg{display:block;width:100%;height:140px;color:var(--good);background:var(--card);border-radius:10px}
+.pr{display:inline-block;background:var(--pr-bg);color:var(--pr);border-radius:8px;padding:3px 10px;font-size:12px;margin:8px 0 0}
+.followbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:28px 0 0}
+.followbox p{margin:0;font-weight:700}
+.follow{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}.follow a{font-size:13px;text-decoration:none;
+border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:99px;padding:5px 12px}
+.empty{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;background:var(--card)}
+td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:right}td:first-child,th:first-child{text-align:left}
+.verdict{border-radius:12px;padding:12px 14px;font-weight:600;margin:14px 0 0}
+.verdict.good{background:var(--good-bg);color:var(--good)}.verdict.muted{background:var(--soft);color:var(--muted)}
+footer{color:var(--muted);font-size:12px;margin:40px 0 0;border-top:1px solid var(--line);padding-top:12px}
+.topbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line)}
+.topbar .brand{font-weight:800;color:var(--fg);text-decoration:none;margin-right:auto}
+.topbar a.m{color:var(--fg);text-decoration:none;font-size:14px}.topbar a.m:hover{color:var(--buy)}
+.enter{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0 4px}
+.enter a{display:block;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);
+border-radius:14px;padding:14px}.enter a:hover{border-color:var(--buy)}.enter b{display:block;font-size:16px}
+.enter span{font-size:13px;color:var(--muted)}
+article.doc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;line-height:1.85}
+article.doc h2{margin-top:28px}article.doc table{margin:10px 0}article.doc li{margin:4px 0}
+.build{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 16px}
+.build h2{margin:0 0 4px}.total{font-size:30px;font-weight:800;margin:6px 0}.build td a{font-size:12px}
+.build td small{color:var(--muted)}.build td:nth-child(2),.build th:nth-child(2){text-align:left}.up{color:var(--bad)}.down{color:var(--good)}
+@media (max-width:520px){.hero h1{font-size:20px}.hero>p:first-of-type{font-size:13px}.price{font-size:26px}
+.grid{grid-template-columns:1fr}.nav{padding:8px 0}}
+</style><script data-goatcounter="https://pcpricewatch.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head><body><main>
+<header class="topbar"><a class="brand" href="">PCパーツ底値ウォッチ</a>
+<a class="m" href="">価格比較</a><a class="m" href="builds.html">予算別構成</a>
+<a class="m" href="simulator.html">シミュレーター</a><a class="m" href="guides/">ガイド</a>
+<a class="m" href="market.html">週間相場</a></header>
+<style>
+.sim{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media (max-width:760px){.sim{grid-template-columns:1fr}}
+#sim-form{display:grid;gap:10px}#sim-form label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
+#sim-form select{font-size:15px;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg)}
+.simbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;position:sticky;top:60px;align-self:start}
+#sim-list{list-style:none;padding:0;margin:10px 0;display:grid;gap:8px}#sim-list li{display:flex;justify-content:space-between;gap:10px;font-size:13px}
+#sim-list small{color:var(--muted)}a.mini{white-space:nowrap;text-decoration:none;background:var(--buy);color:#fff;border-radius:8px;padding:6px 10px;font-weight:700;align-self:center}
+#sim-checks{list-style:none;padding:0;margin:8px 0;font-size:13px}.okc{color:var(--good)}.ngc{color:var(--bad)}
+.presets{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.presets button,#sim-share{border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:99px;padding:6px 12px;cursor:pointer}
+</style>
+<div class="hero"><h1>自作PC構成シミュレーター</h1>
+<p>パーツを選ぶと、最新の最安値で合計金額と互換性をその場でチェックできます。組んだ構成はURLで共有できます。</p></div>
+<div class="presets"><span class="meta">おすすめ構成から始める：</span><button type="button" data-preset="cpu=ryzen5-9600x&amp;mb=mb-b650&amp;mem=ddr5-32gb&amp;ssd=nvme-1tb&amp;gpu=rtx5060&amp;psu=psu-750-gold&amp;case=case-midtower&amp;cooler=cooler-air">フルHDで快適に遊ぶ入門構成</button><button type="button" data-preset="cpu=ryzen7-9800x3d&amp;mb=mb-b650&amp;mem=ddr5-32gb&amp;ssd=nvme-2tb&amp;gpu=rtx5070&amp;psu=psu-750-gold&amp;case=case-midtower&amp;cooler=cooler-air">WQHD・配信もこなすミドル構成</button><button type="button" data-preset="cpu=ryzen7-9800x3d&amp;mb=mb-b650&amp;mem=ddr5-64gb&amp;ssd=nvme-4tb&amp;gpu=rtx5080&amp;psu=psu-850-gold&amp;case=case-midtower&amp;cooler=cooler-air">4Kや重い処理に挑むハイエンド構成</button><button type="button" data-preset="cpu=core-ultra7-265k&amp;mb=mb-b860&amp;mem=ddr5-32gb&amp;ssd=nvme-2tb&amp;gpu=rtx5070ti&amp;psu=psu-850-gold&amp;case=case-midtower&amp;cooler=cooler-air">Intelで組むバランス構成</button></div>
+<div class="sim"><form id="sim-form" onsubmit="return false"></form>
+<div class="simbox"><div class="meta">合計（<span id="sim-count"></span>）</div><div class="total" id="sim-total"></div>
+<ul id="sim-checks"></ul><ul id="sim-list"></ul><button type="button" id="sim-share">この構成のURLをコピー</button>
+<p class="meta">価格は新品最安値（楽天市場・Yahoo!ショッピング）。OS・周辺機器・送料は含みません。互換性チェックは主要な項目のみの目安です。</p></div></div>
+<script type="application/json" id="sim-data">{"cpu": [{"slug": "ryzen5-9600x", "name": "Ryzen 5 9600X", "price": 35080, "url": "https://hb.afl.rakuten.co.jp/hgc/g00u3gvo.dvi7d4da.g00u3gvo.dvi7e9d6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnoah-shopping%2F0730143315609%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnoah-shopping%2Fi%2F10002713%2F&rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c", "shop": "ノア商社 楽天市場店", "source": "rakuten", "item": "AMD Ryzen 5 9600X BOX", "socket": "AM5"}, {"slug": "core-ultra7-265k", "name": "Core Ultra 7 265K", "price": 51400, "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&pid=892711999&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fexcellar-plus%2F1000033619.html", "shop": "エクセラープラス", "source": "yahoo", "item": "爆買 Core Ultra 7 265K 3.9GHz LGA1851 SRQCW", "socket": "LGA1851"}, {"slug": "ryzen7-9800x3d", "name": "Ryzen 7 9800X3D", "price": 57499, "url": "https://hb.afl.rakuten.co.jp/hgc/g00r1fdo.dvi7d538.g00r1fdo.dvi7e3fd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flcs-live%2F10018173%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Flcs-live%2Fi%2F10018067%2F&rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c", "shop": "らいぶshop", "source": "rakuten", "item": "AMD Ryzen 7 9800X3D BOX 100-100001084WOF", "socket": "AM5"}], "mb": [{"slug": "mb-b650", "name": "B650 マザーボード（AM5）", "price": 14646, "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&pid=892711999&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ftsukumo-y%2F4988755077279.html", "shop": "ツクモ パソコン Yahoo!店", "source": "yahoo", "item": "BATTLE-AX B650M-T V14", "socket": "AM5", "mem": "DDR5"}, {"slug": "mb-b860", "name": "B860 マザーボード（LGA1851）", "price": 18061, "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&pid=892711999&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Ftsukumo-y%2F4711377386784.html", "shop": "ツクモ パソコン Yahoo!店", "source": "yahoo", "item": "PRO B860M-B", "socket": "LGA1851", "mem": "DDR5"}], "mem": [{"slug": "ddr4-32gb", "name": "DDR4 32GB (16GB×2)", "price": 31750, "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&pid=892711999&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjnhshop%2Frudr42616g20-2p.html", "shop": "嘉年華Shop", "source": "yahoo", "item": "デスクトップPC用メモリ PC4-21300(DDR4-2666) 32GB(16GBx2枚) DIMM Raver…", "mem": "DDR4"}, {"slug": "ddr5-32gb", "name": "DDR5 32GB (16GB×2)", "price": 50100, "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&pid=892711999&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2F5-8%2F20260803-s-b09mts5yh1-01.html", "shop": "クラストストア", "source": "yahoo", "item": "CORSAIR VENGEANCE DDR5 メモリ 32GB（16GB×2）最大4800MHz対応 Intel XM…", "mem": "DDR5"}, {"slug": "ddr5-64gb", "name": "DDR5 64GB (32GB×2)", "price": 134570, "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&pid=892711999&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Foutletplaza%2F40001115394.html", "shop": "秋葉原　アウトレットプラザ", "source": "yahoo", "item": "Crucial Pro 64GB Kit(2x32GB)DDR5-5600 UDIMM CL46(16Gbit) CP…", "mem": "DDR5"}], "ssd": [{"slug": "nvme-1tb", "name": "NVMe SSD 1TB", "price": 20250, "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&pid=892711999&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fkb-shop%2F0203-012620.html", "shop": "KBショップ", "source": "yahoo", "item": "Verbatim バーベイタム NVMe PCIe Gen3.0x4 PCIe3.0 Vi3000シリーズ 1TB 最…"}, {"slug": "nvme-2tb", "name": "NVMe SSD 2TB", "price": 40304, "url": "https://hb.afl.rakuten.co.jp/hgc/g00rvxco.dvi7d1c7.g00rvxco.dvi7e33c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnanos-sr%2F0840006677628%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnanos-sr%2Fi%2F12707841%2F&rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c", "shop": "ナノズ 楽天市場店", "source": "rakuten", "item": "Corsair Corsair MP600 CORE MINI 2TB Gen4 PCIe x4 NVMe M.2 2…"}, {"slug": "nvme-4tb", "name": "NVMe SSD 4TB", "price": 74500, "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&pid=892711999&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fgalaxy-usa%2Fb0bnb8rq7n.html", "shop": "Galaxy USA", "source": "yahoo", "item": "Addlink S95 4TB SSD PCストレージ用 アップグレード 7200MB/秒 最大読み取り速度 PCIe…"}], "gpu": [{"slug": "rtx5060", "name": "GeForce RTX 5060", "price": 67800, "url": "https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic539273%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10003718%2F&rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c", "shop": "ドスパラ楽天市場店", "source": "rakuten", "item": "Palit(パリット) GeForce RTX5060 WHITE OC / NE75060U19P1 / グラフィッ…", "psu": 550}, {"slug": "rx9070xt", "name": "Radeon RX 9070 XT", "price": 119800, "url": "https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic566229%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10003873%2F&rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c", "shop": "ドスパラ楽天市場店", "source": "rakuten", "item": "ASRock | アスロック AMD Radeon RX 9070 XT Challenger 16GB (RX907…", "psu": null}, {"slug": "rtx5060ti-16gb", "name": "GeForce RTX 5060 Ti 16GB", "price": 129800, "url": "https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic523108%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10003581%2F&rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c", "shop": "ドスパラ楽天市場店", "source": "rakuten", "item": "Palit(パリット) GeForce RTX 5060 Ti Infinity 3 16GB / NE7506T01…", "psu": 600}, {"slug": "rtx5070", "name": "GeForce RTX 5070", "price": 145800, "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&pid=892711999&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjoshin%2F0199291601390-44-73259.html", "shop": "Joshin web", "source": "yahoo", "item": "ASUS｜エイスース ASUS T1 GeForce RTX 5070 12GB GDDR7 OC Edition グ…", "psu": 650}, {"slug": "rtx5070ti", "name": "GeForce RTX 5070 Ti", "price": 218000, "url": "https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic634895%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10004517%2F&rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c", "shop": "ドスパラ楽天市場店", "source": "rakuten", "item": "PNY | ピーエヌワイ VCG5070T16TFXXPB1-O (GeForce RTX 5070 Ti 16GB)", "psu": 750}, {"slug": "rtx5080", "name": "GeForce RTX 5080", "price": 269800, "url": "https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic518916%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10003582%2F&rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c", "shop": "ドスパラ楽天市場店", "source": "rakuten", "item": "Palit NE75080019T2-GB2031A (GeForce RTX 5080 GamingPro 16GB…", "psu": 850}, {"slug": "rtx5090", "name": "GeForce RTX 5090", "price": 1029800, "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&pid=892711999&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fgraplus%2Fgd5090-32gerx3oc.html", "shop": "パソコンパーツのグラプラス", "source": "yahoo", "item": "Inno3D GeForce RTX 5090 X3 OC GD5090-32GERX3OC [PCIExp 32GB…", "psu": null}], "psu": [{"slug": "psu-850-gold", "name": "電源 850W 80PLUS Gold", "price": 10863, "url": "https://hb.afl.rakuten.co.jp/hgc/g00pukwo.dvi7dd34.g00pukwo.dvi7efa0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fjism%2F4711527000690-44-74741-n%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fjism%2Fi%2F14607466%2F&rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c", "shop": "Joshin web 家電とPCの大型専門店", "source": "rakuten", "item": "darkFlash｜ダークフラッシュ ATX3.1規格対応 80Plus GOLD認証 850W 電源ユニット（ブラッ…", "watt": 850}, {"slug": "psu-750-gold", "name": "電源 750W 80PLUS Gold", "price": 11741, "url": "https://hb.afl.rakuten.co.jp/hgc/g00ucloo.dvi7db21.g00ucloo.dvi7e99f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Foktalers-shop%2Famz-b0cnwv28pb-u1%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Foktalers-shop%2Fi%2F10127764%2F&rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c", "shop": "オクタラーズショップ", "source": "rakuten", "item": "ASUS pc電源ユニット 80 Plus Gold 750W ATX Prime AP-750G 国内正規代理店品", "watt": 750}], "case": [{"slug": "case-midtower", "name": "ミドルタワー PCケース", "price": 5030, "url": "https://hb.afl.rakuten.co.jp/hgc/g00uvkco.dvi7d1d7.g00uvkco.dvi7e745/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkaiunshop1%2Fej260603116246%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fkaiunshop1%2Fi%2F10031922%2F&rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c", "shop": "開運ショップ", "source": "rakuten", "item": "強化ガラス Micro-ATX/ PCケース ゲーミング ミドルタワーケース"}], "cooler": [{"slug": "cooler-air", "name": "空冷CPUクーラー（サイドフロー）", "price": 3081, "url": "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&pid=892711999&vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fexcellar%2F1000033377.html", "shop": "エクセラー", "source": "yahoo", "item": "ID-COOLING 空冷CPUクーラー SE-904-XT BLACK ブラック 爆買"}]}</script>
+<script type="application/json" id="sim-roles">[["cpu", "CPU"], ["mb", "マザーボード"], ["mem", "メモリ"], ["ssd", "SSD"], ["gpu", "グラボ"], ["psu", "電源"], ["case", "ケース"], ["cooler", "CPUクーラー"]]</script>
+<script>
+const D=JSON.parse(document.getElementById('sim-data').textContent);
+const ROLES=JSON.parse(document.getElementById('sim-roles').textContent);
+const SRC={rakuten:'楽天市場',yahoo:'Yahoo!ショッピング'};
+const yen=v=>'¥'+v.toLocaleString('ja-JP');
+const sel={};
+function readHash(){const p=new URLSearchParams(location.hash.slice(1));ROLES.forEach(([r])=>{sel[r]=p.get(r)||'';});}
+function writeHash(){const p=new URLSearchParams();ROLES.forEach(([r])=>{if(sel[r])p.set(r,sel[r]);});history.replaceState(null,'','#'+p.toString());}
+function pick(r){return (D[r]||[]).find(i=>i.slug===sel[r]);}
+function render(){
+  let total=0,rows='',n=0;const w=[],ok=[];
+  ROLES.forEach(([r,label])=>{const it=pick(r);if(it){total+=it.price;n++;
+    rows+=`<li><span>${label}：${it.name}<br><small>${it.item}</small></span><a class="mini" href="${it.url}" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/${it.slug}/${it.source}" data-goatcounter-title="${it.name}">${yen(it.price)} ${SRC[it.source]||''}</a></li>`;}});
+  const c=pick('cpu'),m=pick('mb'),mem=pick('mem'),g=pick('gpu'),p=pick('psu'),cl=pick('cooler');
+  if(c&&m&&c.socket&&m.socket){(c.socket===m.socket?ok:w).push(c.socket===m.socket?`CPUとマザーボードのソケット（${c.socket}）が一致`:`ソケット不一致：CPUは${c.socket}、マザーボードは${m.socket}`);}
+  if(mem&&m&&mem.mem&&m.mem){(mem.mem===m.mem?ok:w).push(mem.mem===m.mem?`メモリ規格（${mem.mem}）が一致`:`メモリ規格が違います：マザーボードは${m.mem}対応、メモリは${mem.mem}`);}
+  if(g&&p){ if(g.psu&&p.watt){(p.watt>=g.psu?ok:w).push(p.watt>=g.psu?`電源${p.watt}Wはグラボの推奨${g.psu}W以上`:`電源不足の可能性：グラボの推奨は${g.psu}W、電源は${p.watt}W`);}
+    else w.push(`${g.name}の推奨電源容量はメーカーの仕様を確認してください`);}
+  if(c&&!cl)w.push('CPUクーラーが未選択です（クーラーが付属しないCPUが多いので確認を）');
+  if(c&&c.socket==='AM5'&&m&&m.socket==='AM5'&&/9\d{3}/.test(c.name))w.push('B650などでRyzen 9000を使う場合、BIOS更新が必要なことがあります（メーカーのCPU対応表を確認）');
+  document.getElementById('sim-total').textContent=yen(total);
+  document.getElementById('sim-count').textContent=`${n}/${ROLES.length}点`;
+  document.getElementById('sim-list').innerHTML=rows||'<li class="empty">パーツを選ぶと、ここに購入リンクが並びます</li>';
+  document.getElementById('sim-checks').innerHTML=ok.map(t=>`<li class="okc">✓ ${t}</li>`).join('')+w.map(t=>`<li class="ngc">! ${t}</li>`).join('');
+  writeHash();
+  if(window.goatcounter&&window.goatcounter.bind_events)try{window.goatcounter.bind_events();}catch(e){}
+}
+function build(){
+  readHash();
+  const f=document.getElementById('sim-form');
+  f.innerHTML=ROLES.map(([r,label])=>`<label>${label}<select data-role="${r}"><option value="">選ばない</option>${(D[r]||[]).map(i=>`<option value="${i.slug}">${i.name}（${yen(i.price)}）</option>`).join('')}</select></label>`).join('');
+  f.querySelectorAll('select').forEach(s=>{s.value=sel[s.dataset.role]||'';s.addEventListener('change',()=>{sel[s.dataset.role]=s.value;render();});});
+  document.getElementById('sim-share').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);document.getElementById('sim-share').textContent='URLをコピーしました';}catch(e){prompt('このURLをコピーしてください',location.href);}});
+  document.querySelectorAll('[data-preset]').forEach(b=>b.addEventListener('click',()=>{const p=new URLSearchParams(b.dataset.preset);ROLES.forEach(([r])=>{sel[r]=p.get(r)||'';});f.querySelectorAll('select').forEach(s=>s.value=sel[s.dataset.role]||'');render();}));
+  window.addEventListener('hashchange',()=>{const h=location.hash;readHash();f.querySelectorAll('select').forEach(s=>s.value=sel[s.dataset.role]||'');if(h!==location.hash)return;render();});
+  render();
+}
+build();
+</script><div class="followbox"><p>値下がりをいち早く知る</p><div class="follow"><a href="https://bsky.app/profile/fontom-watcher.bsky.social" rel="noopener">Blueskyで値下がり速報</a><a href="https://www.threads.com/@fal_philosophy" rel="noopener">Threadsで値下がり速報</a><a href="https://x.com/pcpartswatcher1" rel="noopener">X</a></div></div>
+<footer>
+<p>本ページはアフィリエイト広告（楽天アフィリエイト、バリューコマース）を利用しています。リンク先で購入されると運営者に紹介料が支払われますが、価格や掲載順には影響しません。</p>
+<p>表示価格は取得時点のもので、現在の価格・在庫・送料とは異なる場合があります。購入前に必ずリンク先のショップでご確認ください。条件（容量・型番など）で自動抽出しているため、まれに対象外の商品が含まれることがあります。</p>
+<p>過去の価格推移は日ごとの最安値のみを保存しています。アクセス解析にGoatCounter（Cookie不使用・個人を特定する情報は収集しません）を利用しています。</p>
+<p><a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener">Supported by Rakuten Developers</a>
+ ・ <a href="https://developer.yahoo.co.jp/sitemap/" target="_blank" rel="noopener">Webサービス by Yahoo! JAPAN</a>
+ ・ <a href="feed.xml">RSS</a></p>
+<p></p>
+</footer></main></body></html>
