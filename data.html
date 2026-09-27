@@ -1,0 +1,105 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PCパーツ価格データ（CSV・日次）｜PCパーツ底値ウォッチ</title>
+<meta name="description" content="グラボ・CPU・メモリ・SSDなどの新品最安値の日次推移をCSVで公開（CC BY 4.0）。"><link rel="canonical" href="https://fontom-ai.github.io/pc-price-watch/data.html"><meta property="og:site_name" content="PCパーツ底値ウォッチ"><meta property="og:locale" content="ja_JP"><meta name="twitter:title" content="PCパーツ価格データ（CSV・日次）｜PCパーツ底値ウォッチ"><meta name="twitter:description" content="グラボ・CPU・メモリ・SSDなどの新品最安値の日次推移をCSVで公開（CC BY 4.0）。"><meta property="og:title" content="PCパーツ価格データ（CSV・日次）｜PCパーツ底値ウォッチ"><meta property="og:type" content="website"><meta property="og:description" content="グラボ・CPU・メモリ・SSDなどの新品最安値の日次推移をCSVで公開（CC BY 4.0）。"><meta property="og:url" content="https://fontom-ai.github.io/pc-price-watch/data.html"><meta property="og:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png"><meta property="og:image:alt" content="PCパーツ価格データ（CSV・日次）｜PCパーツ底値ウォッチ"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png">
+<link rel="alternate" type="application/atom+xml" title="値下がり情報" href="feed.xml">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#14161a;--muted:#5f6670;--line:#e4e7ec;--soft:#f1f3f6;
+--buy:#e8590c;--buy-fg:#fff;--buy-hover:#c94a06;--good:#0b7a53;--good-bg:#e3f5ec;--bad:#b42318;
+--info:#1d4ed8;--info-bg:#e8efff;--pt:#9a3412;--pt-bg:#fff1e6;--pr:#7a5b00;--pr-bg:#fff7db}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#181b21;--fg:#eceef2;--muted:#9aa3ae;
+--line:#2a2f37;--soft:#20242b;--buy:#f76707;--buy-hover:#ff7a1a;--good:#4ade80;--good-bg:#12301f;
+--bad:#f87171;--info:#93b4ff;--info-bg:#18223a;--pt:#fdba74;--pt-bg:#3a2210;--pr:#f3d57a;--pr-bg:#332a0c}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
+main{max-width:1080px;margin:0 auto;padding:0 16px 24px}a{color:var(--info)}
+.hero{padding:18px 0 4px}.hero h1{font-size:24px;line-height:1.3;margin:0 0 4px}
+.hero p{margin:0;color:var(--muted)}.trust{font-size:12px;color:var(--muted);margin:6px 0 0}
+.nav{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;gap:8px;overflow-x:auto}
+.nav a{flex:0 0 auto;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);
+border-radius:99px;padding:6px 14px;font-size:14px}.nav a:hover{border-color:var(--buy)}
+h2{font-size:18px;margin:26px 0 12px;scroll-margin-top:60px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;
+flex-direction:column;gap:10px;scroll-margin-top:60px}.card.pick{border:2px solid var(--buy)}
+.top{display:flex;gap:12px;align-items:flex-start}.thumb{width:88px;height:88px;flex:0 0 88px;border-radius:10px;
+background:#fff;border:1px solid var(--line);object-fit:contain}
+.kind{font-size:12px;color:var(--muted);margin:0}.title{font-size:15px;font-weight:700;margin:2px 0 0;line-height:1.4}
+.title a{color:var(--fg);text-decoration:none}.item{font-size:12.5px;color:var(--muted);margin:4px 0 0;
+display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.price{font-size:28px;font-weight:800;letter-spacing:-.01em;font-variant-numeric:tabular-nums;line-height:1.1}
+.price small{font-size:13px;font-weight:500;color:var(--muted);margin-left:6px}
+.badges{display:flex;flex-wrap:wrap;gap:6px}.b{font-size:12px;border-radius:6px;padding:2px 8px;font-weight:600}
+.b.good{color:var(--good);background:var(--good-bg)}.b.bad{color:var(--bad);background:var(--soft)}
+.b.info{color:var(--info);background:var(--info-bg)}.b.pt{color:var(--pt);background:var(--pt-bg)}
+.b.muted{color:var(--muted);background:var(--soft);font-weight:500}
+.buy{display:block;text-align:center;text-decoration:none;background:var(--buy);color:var(--buy-fg);
+font-weight:700;font-size:16px;border-radius:10px;padding:12px}.buy:hover{background:var(--buy-hover)}
+.buy span{display:block;font-size:12px;font-weight:500;opacity:.9}
+.prline{font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.wbtn{align-self:flex-start;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:99px;
+padding:3px 10px;font-size:12px;cursor:pointer}.wbtn.on{border-color:var(--buy);color:var(--buy)}
+#watchlist:empty{display:none}#watchlist{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:14px 0 0}
+#watchlist li{font-size:14px;margin:4px 0}.amz{color:var(--info);text-decoration:none;font-weight:600}.sale{background:var(--pt-bg);color:var(--pt);border-radius:10px;
+padding:8px 12px;font-size:13px;margin:10px 0 0}.adslot{margin:24px 0}.tip{margin:12px 0 0;font-size:13px}
+details{border-top:1px solid var(--line);padding-top:8px}summary{cursor:pointer;font-size:13px;color:var(--info)}
+.alt{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:6px}
+.alt a{display:flex;justify-content:space-between;gap:10px;text-decoration:none;color:var(--fg);
+background:var(--soft);border-radius:8px;padding:8px 10px;font-size:13px}.alt a:hover{outline:1px solid var(--buy)}
+.alt b{font-variant-numeric:tabular-nums;white-space:nowrap}.meta{font-size:12px;color:var(--muted)}
+svg{display:block;width:100%;height:140px;color:var(--good);background:var(--card);border-radius:10px}
+.pr{display:inline-block;background:var(--pr-bg);color:var(--pr);border-radius:8px;padding:3px 10px;font-size:12px;margin:8px 0 0}
+.followbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:28px 0 0}
+.followbox p{margin:0;font-weight:700}
+.follow{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}.follow a{font-size:13px;text-decoration:none;
+border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:99px;padding:5px 12px}
+.empty{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;background:var(--card)}
+td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:right}td:first-child,th:first-child{text-align:left}
+.verdict{border-radius:12px;padding:12px 14px;font-weight:600;margin:14px 0 0}
+.verdict.good{background:var(--good-bg);color:var(--good)}.verdict.muted{background:var(--soft);color:var(--muted)}
+.crumbs{margin:0 0 6px}.crumbs a{color:var(--muted)}
+footer{color:var(--muted);font-size:12px;margin:40px 0 0;border-top:1px solid var(--line);padding-top:12px}
+.topbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line)}
+.topbar .brand{font-weight:800;color:var(--fg);text-decoration:none;margin-right:auto}
+.topbar a.m{color:var(--fg);text-decoration:none;font-size:14px}.topbar a.m:hover{color:var(--buy)}
+.enter{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0 4px}
+.enter a{display:block;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);
+border-radius:14px;padding:14px}.enter a:hover{border-color:var(--buy)}.enter b{display:block;font-size:16px}
+.enter span{font-size:13px;color:var(--muted)}
+article.doc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;line-height:1.85}
+article.doc h2{margin-top:28px}article.doc table{margin:10px 0}article.doc li{margin:4px 0}
+.build{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 16px}
+.build h2{margin:0 0 4px}.total{font-size:30px;font-weight:800;margin:6px 0}.build td a{font-size:12px}
+.build td small{color:var(--muted)}.build td:nth-child(2),.build th:nth-child(2){text-align:left}.up{color:var(--bad)}.down{color:var(--good)}
+@media (max-width:520px){.hero h1{font-size:20px}.hero>p:first-of-type{font-size:13px}.price{font-size:26px}
+.grid{grid-template-columns:1fr}.nav{padding:8px 0}}
+</style><script data-goatcounter="https://pcpricewatch.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head><body><main>
+<header class="topbar"><a class="brand" href="">PCパーツ底値ウォッチ</a>
+<a class="m" href="">価格比較</a><a class="m" href="builds.html">予算別構成</a>
+<a class="m" href="simulator.html">シミュレーター</a><a class="m" href="bto.html">自作vsBTO</a><a class="m" href="guides/">ガイド</a>
+<a class="m" href="market.html">週間相場</a></header>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "PCパーツ新品最安値の日次推移（楽天市場・Yahoo!ショッピング）", "description": "自作PCパーツ（グラフィックボード、CPU、メモリ、SSD、マザーボード、電源、ケース、CPUクーラー）の新品・在庫ありの最安値と中央値、出品件数を、楽天市場とYahoo!ショッピングのAPIから日ごとに集計したデータです。品目ごとにCSVで提供しています。", "url": "https://fontom-ai.github.io/pc-price-watch/data.html", "license": "https://creativecommons.org/licenses/by/4.0/", "inLanguage": "ja", "creator": {"@type": "Organization", "name": "PCパーツ底値ウォッチ", "url": "https://fontom-ai.github.io/pc-price-watch/"}, "temporalCoverage": "2026-09-25/2026-09-28", "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/ddr5-32gb.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/ddr5-64gb.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/ddr4-32gb.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/nvme-1tb.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/nvme-2tb.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/nvme-4tb.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/rtx5060.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/rtx5060ti-16gb.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/rtx5070.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/rtx5070ti.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/rtx5080.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/rtx5090.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/rx9070xt.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/ryzen7-9800x3d.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/core-ultra7-265k.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/ryzen5-9600x.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/mb-b650.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/mb-b860.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/psu-750-gold.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/psu-850-gold.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/case-midtower.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/cooler-air.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/bto-rtx5060.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/bto-rtx5070.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/bto-rtx5070ti.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/monitor-27-wqhd.csv"}, {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fontom-ai.github.io/pc-price-watch/data/monitor-24-fhd.csv"}]}</script><div class="hero"><h1>価格データ（CSV）</h1>
+<p>品目ごとの日次の最安値・中央値・出品件数をCSVで公開しています。出典（PCパーツ底値ウォッチ）を明記すれば自由に使えます（CC BY 4.0）。</p></div>
+<article class="doc"><ul><li><a href="data/ddr5-32gb.csv">DDR5 32GB (16GB×2)（CSV）</a></li><li><a href="data/ddr5-64gb.csv">DDR5 64GB (32GB×2)（CSV）</a></li><li><a href="data/ddr4-32gb.csv">DDR4 32GB (16GB×2)（CSV）</a></li><li><a href="data/nvme-1tb.csv">NVMe SSD 1TB（CSV）</a></li><li><a href="data/nvme-2tb.csv">NVMe SSD 2TB（CSV）</a></li><li><a href="data/nvme-4tb.csv">NVMe SSD 4TB（CSV）</a></li><li><a href="data/rtx5060.csv">GeForce RTX 5060（CSV）</a></li><li><a href="data/rtx5060ti-16gb.csv">GeForce RTX 5060 Ti 16GB（CSV）</a></li><li><a href="data/rtx5070.csv">GeForce RTX 5070（CSV）</a></li><li><a href="data/rtx5070ti.csv">GeForce RTX 5070 Ti（CSV）</a></li><li><a href="data/rtx5080.csv">GeForce RTX 5080（CSV）</a></li><li><a href="data/rtx5090.csv">GeForce RTX 5090（CSV）</a></li><li><a href="data/rx9070xt.csv">Radeon RX 9070 XT（CSV）</a></li><li><a href="data/ryzen7-9800x3d.csv">Ryzen 7 9800X3D（CSV）</a></li><li><a href="data/core-ultra7-265k.csv">Core Ultra 7 265K（CSV）</a></li><li><a href="data/ryzen5-9600x.csv">Ryzen 5 9600X（CSV）</a></li><li><a href="data/mb-b650.csv">B650 マザーボード（AM5）（CSV）</a></li><li><a href="data/mb-b860.csv">B860 マザーボード（LGA1851）（CSV）</a></li><li><a href="data/psu-750-gold.csv">電源 750W 80PLUS Gold（CSV）</a></li><li><a href="data/psu-850-gold.csv">電源 850W 80PLUS Gold（CSV）</a></li><li><a href="data/case-midtower.csv">ミドルタワー PCケース（CSV）</a></li><li><a href="data/cooler-air.csv">空冷CPUクーラー（サイドフロー）（CSV）</a></li><li><a href="data/bto-rtx5060.csv">BTOゲーミングPC（RTX 5060搭載）（CSV）</a></li><li><a href="data/bto-rtx5070.csv">BTOゲーミングPC（RTX 5070搭載）（CSV）</a></li><li><a href="data/bto-rtx5070ti.csv">BTOゲーミングPC（RTX 5070 Ti搭載）（CSV）</a></li><li><a href="data/monitor-27-wqhd.csv">ゲーミングモニター 27インチ WQHD（CSV）</a></li><li><a href="data/monitor-24-fhd.csv">ゲーミングモニター 24インチ フルHD（CSV）</a></li></ul><p class="meta">列：date（日付）, min_price_jpy（最安値）, median_price_jpy（中央値）, offer_count（件数）。集計方法は<a href="about.html">こちら</a>。</p></article>
+<footer>
+<p>本ページはアフィリエイト広告（楽天アフィリエイト、バリューコマース）を利用しています。リンク先で購入されると運営者に紹介料が支払われますが、価格や掲載順には影響しません。</p>
+<p>表示価格は取得時点のもので、現在の価格・在庫・送料とは異なる場合があります。購入前に必ずリンク先のショップでご確認ください。条件（容量・型番など）で自動抽出しているため、まれに対象外の商品が含まれることがあります。</p>
+<p>過去の価格推移は日ごとの最安値のみを保存しています。アクセス解析にGoatCounter（Cookie不使用・個人を特定する情報は収集しません）を利用しています。</p>
+<p><a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener">Supported by Rakuten Developers</a>
+ ・ <a href="https://developer.yahoo.co.jp/sitemap/" target="_blank" rel="noopener">Webサービス by Yahoo! JAPAN</a>
+ ・ <a href="feed.xml">RSS</a> ・ <a href="about.html">集計方法・運営者</a>
+ ・ <a href="data.html">価格データ</a></p>
+<p>
+ <a href="privacy.html">プライバシーポリシー</a></p>
+</footer></main><script>
+(function(){const K='pcw-watch';let W={};try{W=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(W))}catch(e){}};
+document.querySelectorAll('.wbtn').forEach(b=>{const s=b.dataset.watch;const on=()=>{b.classList.toggle('on',!!W[s]);b.textContent=W[s]?'★ ウォッチ中':'☆ ウォッチ';};on();
+ b.addEventListener('click',()=>{if(W[s])delete W[s];else W[s]={name:b.dataset.name,price:+b.dataset.price,seen:+b.dataset.price};save();on();});});
+const box=document.getElementById('watchlist');if(!box||!Object.keys(W).length)return;
+fetch(box.dataset.src).then(r=>r.json()).then(P=>{const rows=Object.entries(W).map(([s,w])=>{const p=P[s];if(!p)return '';
+ const d=p.price-w.seen;const t=d<0?`<b class="down">前回見たときより${(-d).toLocaleString()}円安い</b>`:d>0?`<span class="up">前回より${d.toLocaleString()}円高い</span>`:'変化なし';
+ w.seen=p.price;return `<li><a href="${box.dataset.root}p/${s}.html">${w.name}</a>：¥${p.price.toLocaleString()}（${t}）</li>`;}).join('');
+ save();box.innerHTML=`<b>ウォッチ中のパーツ</b><ul>${rows}</ul><p class="meta">この一覧はお使いのブラウザにだけ保存されています。</p>`;}).catch(()=>{});})();
+</script></body></html>

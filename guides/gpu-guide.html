@@ -1,7 +1,7 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>グラボの選び方：RTX 50シリーズとRadeon RX 9000 | PCパーツ底値ウォッチ</title>
-<meta name="description" content="グラフィックボードをVRAM容量・消費電力・予算で選ぶポイントを、RTX 50シリーズとRadeon RX 9000シリーズで整理しました。"><link rel="canonical" href="https://fontom-ai.github.io/pc-price-watch/guides/gpu-guide.html"><meta property="og:title" content="グラボの選び方：RTX 50シリーズとRadeon RX 9000 | PCパーツ底値ウォッチ"><meta property="og:type" content="website"><meta property="og:description" content="グラフィックボードをVRAM容量・消費電力・予算で選ぶポイントを、RTX 50シリーズとRadeon RX 9000シリーズで整理しました。"><meta property="og:url" content="https://fontom-ai.github.io/pc-price-watch/guides/gpu-guide.html"><meta property="og:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png">
+<meta name="description" content="グラフィックボードをVRAM容量・消費電力・予算で選ぶポイントを、RTX 50シリーズとRadeon RX 9000シリーズで整理しました。"><link rel="canonical" href="https://fontom-ai.github.io/pc-price-watch/guides/gpu-guide.html"><meta property="og:site_name" content="PCパーツ底値ウォッチ"><meta property="og:locale" content="ja_JP"><meta name="twitter:title" content="グラボの選び方：RTX 50シリーズとRadeon RX 9000 | PCパーツ底値ウォッチ"><meta name="twitter:description" content="グラフィックボードをVRAM容量・消費電力・予算で選ぶポイントを、RTX 50シリーズとRadeon RX 9000シリーズで整理しました。"><meta property="og:title" content="グラボの選び方：RTX 50シリーズとRadeon RX 9000 | PCパーツ底値ウォッチ"><meta property="og:type" content="website"><meta property="og:description" content="グラフィックボードをVRAM容量・消費電力・予算で選ぶポイントを、RTX 50シリーズとRadeon RX 9000シリーズで整理しました。"><meta property="og:url" content="https://fontom-ai.github.io/pc-price-watch/guides/gpu-guide.html"><meta property="og:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png"><meta property="og:image:alt" content="グラボの選び方：RTX 50シリーズとRadeon RX 9000 | PCパーツ底値ウォッチ"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png">
 <link rel="alternate" type="application/atom+xml" title="値下がり情報" href="../feed.xml">
 <style>
 :root{--bg:#f6f7f9;--card:#fff;--fg:#14161a;--muted:#5f6670;--line:#e4e7ec;--soft:#f1f3f6;
@@ -36,6 +36,12 @@ display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hi
 .buy{display:block;text-align:center;text-decoration:none;background:var(--buy);color:var(--buy-fg);
 font-weight:700;font-size:16px;border-radius:10px;padding:12px}.buy:hover{background:var(--buy-hover)}
 .buy span{display:block;font-size:12px;font-weight:500;opacity:.9}
+.prline{font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.wbtn{align-self:flex-start;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:99px;
+padding:3px 10px;font-size:12px;cursor:pointer}.wbtn.on{border-color:var(--buy);color:var(--buy)}
+#watchlist:empty{display:none}#watchlist{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:14px 0 0}
+#watchlist li{font-size:14px;margin:4px 0}.amz{color:var(--info);text-decoration:none;font-weight:600}.sale{background:var(--pt-bg);color:var(--pt);border-radius:10px;
+padding:8px 12px;font-size:13px;margin:10px 0 0}.adslot{margin:24px 0}.tip{margin:12px 0 0;font-size:13px}
 details{border-top:1px solid var(--line);padding-top:8px}summary{cursor:pointer;font-size:13px;color:var(--info)}
 .alt{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:6px}
 .alt a{display:flex;justify-content:space-between;gap:10px;text-decoration:none;color:var(--fg);
@@ -52,6 +58,7 @@ table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:ta
 td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:right}td:first-child,th:first-child{text-align:left}
 .verdict{border-radius:12px;padding:12px 14px;font-weight:600;margin:14px 0 0}
 .verdict.good{background:var(--good-bg);color:var(--good)}.verdict.muted{background:var(--soft);color:var(--muted)}
+.crumbs{margin:0 0 6px}.crumbs a{color:var(--muted)}
 footer{color:var(--muted);font-size:12px;margin:40px 0 0;border-top:1px solid var(--line);padding-top:12px}
 .topbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line)}
 .topbar .brand{font-weight:800;color:var(--fg);text-decoration:none;margin-right:auto}
@@ -70,9 +77,11 @@ article.doc h2{margin-top:28px}article.doc table{margin:10px 0}article.doc li{ma
 </style><script data-goatcounter="https://pcpricewatch.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head><body><main>
 <header class="topbar"><a class="brand" href="../">PCパーツ底値ウォッチ</a>
 <a class="m" href="../">価格比較</a><a class="m" href="../builds.html">予算別構成</a>
-<a class="m" href="../simulator.html">シミュレーター</a><a class="m" href="../guides/">ガイド</a>
+<a class="m" href="../simulator.html">シミュレーター</a><a class="m" href="../bto.html">自作vsBTO</a><a class="m" href="../guides/">ガイド</a>
 <a class="m" href="../market.html">週間相場</a></header>
-<div class="hero"><p class="meta"><a href="./">← ガイド一覧</a></p><h1>グラボの選び方：RTX 50シリーズとRadeon RX 9000</h1>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "PCパーツ底値ウォッチ", "item": "https://fontom-ai.github.io/pc-price-watch/"}, {"@type": "ListItem", "position": 2, "name": "自作PCガイド", "item": "https://fontom-ai.github.io/pc-price-watch/guides/"}, {"@type": "ListItem", "position": 3, "name": "グラボの選び方：RTX 50シリーズとRadeon RX 9000"}]}, {"@type": "Article", "headline": "グラボの選び方：RTX 50シリーズとRadeon RX 9000", "description": "グラフィックボードをVRAM容量・消費電力・予算で選ぶポイントを、RTX 50シリーズとRadeon RX 9000シリーズで整理しました。", "datePublished": "2026-09-27T09:00:00+09:00", "dateModified": "2026-09-27T09:00:00+09:00", "image": ["https://fontom-ai.github.io/pc-price-watch/og/site.png"], "inLanguage": "ja", "author": {"@type": "Organization", "name": "PCパーツ底値ウォッチ", "url": "https://fontom-ai.github.io/pc-price-watch/about.html"}, "publisher": {"@type": "Organization", "name": "PCパーツ底値ウォッチ", "url": "https://fontom-ai.github.io/pc-price-watch/"}}]}</script>
+<div class="hero"><nav class="meta crumbs" aria-label="パンくず"><a href="../">PCパーツ底値ウォッチ</a> ＞ <a href="../guides/">自作PCガイド</a> ＞ グラボの選び方：RTX 50シリーズとRadeon RX 9000</nav><h1>グラボの選び方：RTX 50シリーズとRadeon RX 9000</h1>
+<p class="meta">公開日 2026-09-27 ・ 最終更新 2026-09-27</p>
 <p>グラフィックボードをVRAM容量・消費電力・予算で選ぶポイントを、RTX 50シリーズとRadeon RX 9000シリーズで整理しました。</p><p class="pr">【PR】本ページはアフィリエイト広告を利用しています</p></div>
 <article class="doc"><p>グラフィックボード（グラボ）は、ゲームの快適さを最も大きく左右するパーツで、予算のいちばん大きな割合を占めます。</p>
 <h2>まず見るべき3つのポイント</h2>
@@ -92,7 +101,7 @@ article.doc h2{margin-top:28px}article.doc table{margin:10px 0}article.doc li{ma
 </thead>
 <tbody>
 <tr>
-<td>RTX 5060</td>
+<td><a href="../p/rtx5060.html">RTX 5060</a></td>
 <td>8GB</td>
 <td>550W</td>
 </tr>
@@ -102,22 +111,22 @@ article.doc h2{margin-top:28px}article.doc table{margin:10px 0}article.doc li{ma
 <td>600W</td>
 </tr>
 <tr>
-<td>RTX 5070</td>
+<td><a href="../p/rtx5070.html">RTX 5070</a></td>
 <td>12GB</td>
 <td>650W</td>
 </tr>
 <tr>
-<td>RTX 5070 Ti</td>
+<td><a href="../p/rtx5070ti.html">RTX 5070 Ti</a></td>
 <td>16GB</td>
 <td>750W</td>
 </tr>
 <tr>
-<td>RTX 5080</td>
+<td><a href="../p/rtx5080.html">RTX 5080</a></td>
 <td>16GB</td>
 <td>850W</td>
 </tr>
 <tr>
-<td>Radeon RX 9070 XT</td>
+<td>Radeon <a href="../p/rx9070xt.html">RX 9070 XT</a></td>
 <td>16GB</td>
 <td>－</td>
 </tr>
@@ -131,61 +140,73 @@ article.doc h2{margin-top:28px}article.doc table{margin:10px 0}article.doc li{ma
 <li><strong>4Kや重い処理</strong>：RTX 5070 Ti / RTX 5080クラス</li>
 </ul>
 <h2>同じモデルでも価格差がある</h2>
-<p>同じ「RTX 5070」でも、メーカーやクーラーの違いで数万円の差が出ることがあります。当サイトでは、条件に合う新品の中で一番安い出品を表示しています。</p><p class="meta">公開日 2026-09-27</p></article>
+<p>同じ「RTX 5070」でも、メーカーやクーラーの違いで数万円の差が出ることがあります。当サイトでは、条件に合う新品の中で一番安い出品を表示しています。</p></article>
 <h2>この記事で紹介したパーツの最安値</h2><div class="grid"><article class="card" id="rtx5060">
 <div class="top"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_gold/dospara-r/img/item/539273.jpg?_ex=240x240" alt="GeForce RTX 5060" loading="lazy" width="88" height="88"><div><p class="kind">GPU</p>
 <p class="title"><a href="../p/rtx5060.html">GeForce RTX 5060</a></p>
 <p class="item">Palit(パリット) GeForce RTX5060 WHITE OC / NE75060U19P1 / グラフィックボード</p></div></div>
 <div class="price">¥67,800</div>
-<div class="badges"><span class="b good">30日最安</span><span class="b info">送料無料</span></div>
+<button type="button" class="wbtn" data-watch="rtx5060" data-name="GeForce RTX 5060" data-price="67800">☆ ウォッチ</button>
+<div class="badges"><span class="b good">最安値更新</span><span class="b info">送料無料</span></div>
 <a class="buy" href="https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic539273%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10003718%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5060/rakuten" data-goatcounter-title="GeForce RTX 5060">楽天市場で見る →<span>ドスパラ楽天市場店</span></a>
+<div class="prline">PR・楽天市場／Yahoo!ショッピングの新品最安値（取得時点）</div>
 <details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fdospara-y%2Fic539273.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5060/yahoo" data-goatcounter-title="GeForce RTX 5060"><span>ドスパラYahoo!店（Yahoo!ショッピング） ・送料無料</span><b>¥67,800</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic525590%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10003607%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5060/rakuten" data-goatcounter-title="GeForce RTX 5060"><span>ドスパラ楽天市場店（楽天市場） ・送料無料</span><b>¥69,800</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fdospara-y%2Fic525590.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5060/yahoo" data-goatcounter-title="GeForce RTX 5060"><span>ドスパラYahoo!店（Yahoo!ショッピング） ・送料無料</span><b>¥69,800</b></a></li></ul></details>
-<div class="meta">30日最安 ¥67,800 ・ 9/28 01:15時点 ・ <a href="../p/rtx5060.html">価格推移を見る</a></div>
+<div class="meta">9/25以降の最安 ¥67,800 ・ 9/28 01:15時点 ・ <a href="../p/rtx5060.html">価格推移を見る</a></div>
 </article><article class="card" id="rtx5060ti-16gb">
 <div class="top"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_gold/dospara-r/img/item/523108.jpg?_ex=240x240" alt="GeForce RTX 5060 Ti 16GB" loading="lazy" width="88" height="88"><div><p class="kind">GPU</p>
 <p class="title"><a href="../p/rtx5060ti-16gb.html">GeForce RTX 5060 Ti 16GB</a></p>
 <p class="item">Palit(パリット) GeForce RTX 5060 Ti Infinity 3 16GB / NE7506T019T1-…</p></div></div>
 <div class="price">¥129,800</div>
-<div class="badges"><span class="b good">30日最安</span><span class="b info">送料無料</span></div>
+<button type="button" class="wbtn" data-watch="rtx5060ti-16gb" data-name="GeForce RTX 5060 Ti 16GB" data-price="129800">☆ ウォッチ</button>
+<div class="badges"><span class="b good">最安値更新</span><span class="b info">送料無料</span></div>
 <a class="buy" href="https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic523108%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10003581%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5060ti-16gb/rakuten" data-goatcounter-title="GeForce RTX 5060 Ti 16GB">楽天市場で見る →<span>ドスパラ楽天市場店</span></a>
+<div class="prline">PR・楽天市場／Yahoo!ショッピングの新品最安値（取得時点）</div>
 <details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fdospara-y%2Fic523108.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5060ti-16gb/yahoo" data-goatcounter-title="GeForce RTX 5060 Ti 16GB"><span>ドスパラYahoo!店（Yahoo!ショッピング） ・送料無料</span><b>¥129,800</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic625088%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10004518%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5060ti-16gb/rakuten" data-goatcounter-title="GeForce RTX 5060 Ti 16GB"><span>ドスパラ楽天市場店（楽天市場） ・送料無料</span><b>¥134,800</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic548694%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10003838%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5060ti-16gb/rakuten" data-goatcounter-title="GeForce RTX 5060 Ti 16GB"><span>ドスパラ楽天市場店（楽天市場） ・送料無料</span><b>¥138,000</b></a></li></ul></details>
-<div class="meta">30日最安 ¥129,800 ・ 9/28 01:15時点 ・ <a href="../p/rtx5060ti-16gb.html">価格推移を見る</a></div>
+<div class="meta">9/25以降の最安 ¥129,800 ・ 9/28 01:15時点 ・ <a href="../p/rtx5060ti-16gb.html">価格推移を見る</a></div>
 </article><article class="card" id="rtx5070">
 <div class="top"><img class="thumb" src="https://item-shopping.c.yimg.jp/i/g/joshin_0199291601390-44-73259" alt="GeForce RTX 5070" loading="lazy" width="88" height="88"><div><p class="kind">GPU</p>
 <p class="title"><a href="../p/rtx5070.html">GeForce RTX 5070</a></p>
 <p class="item">ASUS｜エイスース ASUS T1 GeForce RTX 5070 12GB GDDR7 OC Edition グラフィッ…</p></div></div>
 <div class="price">¥145,800</div>
+<button type="button" class="wbtn" data-watch="rtx5070" data-name="GeForce RTX 5070" data-price="145800">☆ ウォッチ</button>
 <div class="badges"><span class="b info">送料無料</span></div>
 <a class="buy" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjoshin%2F0199291601390-44-73259.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5070/yahoo" data-goatcounter-title="GeForce RTX 5070">Yahoo!ショッピングで見る →<span>Joshin web</span></a>
+<div class="prline">PR・楽天市場／Yahoo!ショッピングの新品最安値（取得時点）</div>
 <details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00qfp9o.dvi7d2ce.g00qfp9o.dvi7eee3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fe-zoa%2Fitm0015927485%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fe-zoa%2Fi%2F10146174%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5070/rakuten" data-goatcounter-title="GeForce RTX 5070"><span>e-zoa 楽天市場 SHOP（楽天市場） ・送料無料</span><b>¥147,273</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00rfqvo.dvi7dab9.g00rfqvo.dvi7e0b3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcompmoto-r%2F4537694367295%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fcompmoto-r%2Fi%2F12665667%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5070/rakuten" data-goatcounter-title="GeForce RTX 5070"><span>コンプモト 楽天市場店（楽天市場）</span><b>¥148,079</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00rd00o.dvi7d4eb.g00rd00o.dvi7e194/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fe-cutestyle%2Fp000000903506%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fe-cutestyle%2Fi%2F19793550%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5070/rakuten" data-goatcounter-title="GeForce RTX 5070"><span>ディーライズ2号店（楽天市場） ・送料無料</span><b>¥150,210</b></a></li></ul></details>
-<div class="meta">30日最安 ¥124,118 ・ 9/28 01:16時点 ・ <a href="../p/rtx5070.html">価格推移を見る</a></div>
+<div class="meta">9/25以降の最安 ¥124,118 ・ 9/28 01:16時点 ・ <a href="../p/rtx5070.html">価格推移を見る</a></div>
 </article><article class="card" id="rtx5070ti">
 <div class="top"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/dospara-r/cabinet/item/diy/634895.jpg?_ex=240x240" alt="GeForce RTX 5070 Ti" loading="lazy" width="88" height="88"><div><p class="kind">GPU</p>
 <p class="title"><a href="../p/rtx5070ti.html">GeForce RTX 5070 Ti</a></p>
 <p class="item">PNY | ピーエヌワイ VCG5070T16TFXXPB1-O (GeForce RTX 5070 Ti 16GB)</p></div></div>
 <div class="price">¥218,000</div>
+<button type="button" class="wbtn" data-watch="rtx5070ti" data-name="GeForce RTX 5070 Ti" data-price="218000">☆ ウォッチ</button>
 <div class="badges"><span class="b bad">前日比 ▲11,194円</span><span class="b info">送料無料</span></div>
 <a class="buy" href="https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic634895%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10004517%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5070ti/rakuten" data-goatcounter-title="GeForce RTX 5070 Ti">楽天市場で見る →<span>ドスパラ楽天市場店</span></a>
+<div class="prline">PR・楽天市場／Yahoo!ショッピングの新品最安値（取得時点）</div>
 <details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic526330%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10003657%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5070ti/rakuten" data-goatcounter-title="GeForce RTX 5070 Ti"><span>ドスパラ楽天市場店（楽天市場） ・送料無料</span><b>¥218,000</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fdospara-y%2Fic526330.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5070ti/yahoo" data-goatcounter-title="GeForce RTX 5070 Ti"><span>ドスパラYahoo!店（Yahoo!ショッピング） ・送料無料</span><b>¥218,000</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00uagro.dvi7dfc2.g00uagro.dvi7e29a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpsidekick%2F4988755071208%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fpsidekick%2Fi%2F10000985%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5070ti/rakuten" data-goatcounter-title="GeForce RTX 5070 Ti"><span>ピーサイドキック 楽天市場店（楽天市場） ・送料無料</span><b>¥219,800</b></a></li></ul></details>
-<div class="meta">30日最安 ¥183,671 ・ 9/28 01:16時点 ・ <a href="../p/rtx5070ti.html">価格推移を見る</a></div>
+<div class="meta">9/25以降の最安 ¥183,671 ・ 9/28 01:16時点 ・ <a href="../p/rtx5070ti.html">価格推移を見る</a></div>
 </article><article class="card" id="rtx5080">
 <div class="top"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_gold/dospara-r/img/item/518916.jpg?_ex=240x240" alt="GeForce RTX 5080" loading="lazy" width="88" height="88"><div><p class="kind">GPU</p>
 <p class="title"><a href="../p/rtx5080.html">GeForce RTX 5080</a></p>
 <p class="item">Palit NE75080019T2-GB2031A (GeForce RTX 5080 GamingPro 16GB) /…</p></div></div>
 <div class="price">¥269,800</div>
-<div class="badges"><span class="b good">30日最安</span><span class="b info">送料無料</span><span class="b muted">★5.0（2件）</span></div>
+<button type="button" class="wbtn" data-watch="rtx5080" data-name="GeForce RTX 5080" data-price="269800">☆ ウォッチ</button>
+<div class="badges"><span class="b good">最安値更新</span><span class="b info">送料無料</span><span class="b muted">★5.0（2件）</span></div>
 <a class="buy" href="https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic518916%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10003582%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5080/rakuten" data-goatcounter-title="GeForce RTX 5080">楽天市場で見る →<span>ドスパラ楽天市場店</span></a>
+<div class="prline">PR・楽天市場／Yahoo!ショッピングの新品最安値（取得時点）</div>
 <details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fdospara-y%2Fic518916.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5080/yahoo" data-goatcounter-title="GeForce RTX 5080"><span>ドスパラYahoo!店（Yahoo!ショッピング） ・送料無料</span><b>¥269,800</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic594817%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10004374%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5080/rakuten" data-goatcounter-title="GeForce RTX 5080"><span>ドスパラ楽天市場店（楽天市場） ・送料無料</span><b>¥282,800</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00rd00o.dvi7d4eb.g00rd00o.dvi7e194/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fe-cutestyle%2Fp000000905676%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fe-cutestyle%2Fi%2F19798550%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rtx5080/rakuten" data-goatcounter-title="GeForce RTX 5080"><span>ディーライズ2号店（楽天市場） ・送料無料</span><b>¥288,770</b></a></li></ul></details>
-<div class="meta">30日最安 ¥269,800 ・ 9/28 01:17時点 ・ <a href="../p/rtx5080.html">価格推移を見る</a></div>
+<div class="meta">9/25以降の最安 ¥269,800 ・ 9/28 01:17時点 ・ <a href="../p/rtx5080.html">価格推移を見る</a></div>
 </article><article class="card" id="rx9070xt">
 <div class="top"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_gold/dospara-r/img/item/566229.jpg?_ex=240x240" alt="Radeon RX 9070 XT" loading="lazy" width="88" height="88"><div><p class="kind">GPU</p>
 <p class="title"><a href="../p/rx9070xt.html">Radeon RX 9070 XT</a></p>
 <p class="item">ASRock | アスロック AMD Radeon RX 9070 XT Challenger 16GB (RX9070XT…</p></div></div>
 <div class="price">¥119,800</div>
-<div class="badges"><span class="b good">30日最安</span><span class="b info">送料無料</span></div>
+<button type="button" class="wbtn" data-watch="rx9070xt" data-name="Radeon RX 9070 XT" data-price="119800">☆ ウォッチ</button>
+<div class="badges"><span class="b good">最安値更新</span><span class="b info">送料無料</span></div>
 <a class="buy" href="https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic566229%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10003873%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rx9070xt/rakuten" data-goatcounter-title="Radeon RX 9070 XT">楽天市場で見る →<span>ドスパラ楽天市場店</span></a>
+<div class="prline">PR・楽天市場／Yahoo!ショッピングの新品最安値（取得時点）</div>
 <details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fdospara-y%2Fic566229.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rx9070xt/yahoo" data-goatcounter-title="Radeon RX 9070 XT"><span>ドスパラYahoo!店（Yahoo!ショッピング） ・送料無料</span><b>¥119,800</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00u67po.dvi7da09.g00u67po.dvi7ee90/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdospara-r%2Fic522746%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fdospara-r%2Fi%2F10003677%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rx9070xt/rakuten" data-goatcounter-title="Radeon RX 9070 XT"><span>ドスパラ楽天市場店（楽天市場） ・送料無料</span><b>¥129,800</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fdospara-y%2Fic522746.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/rx9070xt/yahoo" data-goatcounter-title="Radeon RX 9070 XT"><span>ドスパラYahoo!店（Yahoo!ショッピング） ・送料無料</span><b>¥129,800</b></a></li></ul></details>
-<div class="meta">30日最安 ¥119,800 ・ 9/28 01:18時点 ・ <a href="../p/rx9070xt.html">価格推移を見る</a></div>
+<div class="meta">9/25以降の最安 ¥119,800 ・ 9/28 01:18時点 ・ <a href="../p/rx9070xt.html">価格推移を見る</a></div>
 </article></div>
 <div class="followbox"><p>値下がりをいち早く知る</p><div class="follow"><a href="https://bsky.app/profile/fontom-watcher.bsky.social" rel="noopener">Blueskyで値下がり速報</a><a href="https://www.threads.com/@fal_philosophy" rel="noopener">Threadsで値下がり速報</a><a href="https://x.com/pcpartswatcher1" rel="noopener">X</a></div></div>
 <footer>
@@ -194,6 +215,18 @@ article.doc h2{margin-top:28px}article.doc table{margin:10px 0}article.doc li{ma
 <p>過去の価格推移は日ごとの最安値のみを保存しています。アクセス解析にGoatCounter（Cookie不使用・個人を特定する情報は収集しません）を利用しています。</p>
 <p><a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener">Supported by Rakuten Developers</a>
  ・ <a href="https://developer.yahoo.co.jp/sitemap/" target="_blank" rel="noopener">Webサービス by Yahoo! JAPAN</a>
- ・ <a href="../feed.xml">RSS</a></p>
-<p></p>
-</footer></main></body></html>
+ ・ <a href="../feed.xml">RSS</a> ・ <a href="../about.html">集計方法・運営者</a>
+ ・ <a href="../data.html">価格データ</a></p>
+<p>
+ <a href="../privacy.html">プライバシーポリシー</a></p>
+</footer></main><script>
+(function(){const K='pcw-watch';let W={};try{W=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(W))}catch(e){}};
+document.querySelectorAll('.wbtn').forEach(b=>{const s=b.dataset.watch;const on=()=>{b.classList.toggle('on',!!W[s]);b.textContent=W[s]?'★ ウォッチ中':'☆ ウォッチ';};on();
+ b.addEventListener('click',()=>{if(W[s])delete W[s];else W[s]={name:b.dataset.name,price:+b.dataset.price,seen:+b.dataset.price};save();on();});});
+const box=document.getElementById('watchlist');if(!box||!Object.keys(W).length)return;
+fetch(box.dataset.src).then(r=>r.json()).then(P=>{const rows=Object.entries(W).map(([s,w])=>{const p=P[s];if(!p)return '';
+ const d=p.price-w.seen;const t=d<0?`<b class="down">前回見たときより${(-d).toLocaleString()}円安い</b>`:d>0?`<span class="up">前回より${d.toLocaleString()}円高い</span>`:'変化なし';
+ w.seen=p.price;return `<li><a href="${box.dataset.root}p/${s}.html">${w.name}</a>：¥${p.price.toLocaleString()}（${t}）</li>`;}).join('');
+ save();box.innerHTML=`<b>ウォッチ中のパーツ</b><ul>${rows}</ul><p class="meta">この一覧はお使いのブラウザにだけ保存されています。</p>`;}).catch(()=>{});})();
+</script></body></html>
