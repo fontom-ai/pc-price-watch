@@ -1,0 +1,110 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>全ページ一覧｜PCパーツ底値ウォッチ</title>
+<meta name="description" content="PCパーツ底値ウォッチの全ページ（品目別の最安値・ガイド・ツール）の索引。"><link rel="canonical" href="https://fontom-ai.github.io/pc-price-watch/index-all.html"><meta property="og:site_name" content="PCパーツ底値ウォッチ"><meta property="og:locale" content="ja_JP"><meta name="twitter:title" content="全ページ一覧｜PCパーツ底値ウォッチ"><meta name="twitter:description" content="PCパーツ底値ウォッチの全ページ（品目別の最安値・ガイド・ツール）の索引。"><meta property="og:title" content="全ページ一覧｜PCパーツ底値ウォッチ"><meta property="og:type" content="website"><meta property="og:description" content="PCパーツ底値ウォッチの全ページ（品目別の最安値・ガイド・ツール）の索引。"><meta property="og:url" content="https://fontom-ai.github.io/pc-price-watch/index-all.html"><meta property="og:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png"><meta property="og:image:alt" content="全ページ一覧｜PCパーツ底値ウォッチ"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png">
+<link rel="alternate" type="application/atom+xml" title="値下がり情報" href="feed.xml">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#14161a;--muted:#5f6670;--line:#e4e7ec;--soft:#f1f3f6;
+--buy:#e8590c;--buy-fg:#fff;--buy-hover:#c94a06;--good:#0b7a53;--good-bg:#e3f5ec;--bad:#b42318;
+--info:#1d4ed8;--info-bg:#e8efff;--pt:#9a3412;--pt-bg:#fff1e6;--pr:#7a5b00;--pr-bg:#fff7db}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#181b21;--fg:#eceef2;--muted:#9aa3ae;
+--line:#2a2f37;--soft:#20242b;--buy:#f76707;--buy-hover:#ff7a1a;--good:#4ade80;--good-bg:#12301f;
+--bad:#f87171;--info:#93b4ff;--info-bg:#18223a;--pt:#fdba74;--pt-bg:#3a2210;--pr:#f3d57a;--pr-bg:#332a0c}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
+main{max-width:1080px;margin:0 auto;padding:0 16px 24px}a{color:var(--info)}
+.hero{padding:18px 0 4px}.hero h1{font-size:24px;line-height:1.3;margin:0 0 4px}
+.hero p{margin:0;color:var(--muted)}.trust{font-size:12px;color:var(--muted);margin:6px 0 0}
+.nav{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;gap:8px;overflow-x:auto}
+.nav a{flex:0 0 auto;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);
+border-radius:99px;padding:6px 14px;font-size:14px}.nav a:hover{border-color:var(--buy)}
+h2{font-size:18px;margin:26px 0 12px;scroll-margin-top:60px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;
+flex-direction:column;gap:10px;scroll-margin-top:60px}.card.pick{border:2px solid var(--buy)}
+.top{display:flex;gap:12px;align-items:flex-start}.thumb{width:88px;height:88px;flex:0 0 88px;border-radius:10px;
+background:#fff;border:1px solid var(--line);object-fit:contain}
+.kind{font-size:12px;color:var(--muted);margin:0}.title{font-size:15px;font-weight:700;margin:2px 0 0;line-height:1.4}
+.title a{color:var(--fg);text-decoration:none}.item{font-size:12.5px;color:var(--muted);margin:4px 0 0;
+display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.price{font-size:28px;font-weight:800;letter-spacing:-.01em;font-variant-numeric:tabular-nums;line-height:1.1}
+.price small{font-size:13px;font-weight:500;color:var(--muted);margin-left:6px}
+.badges{display:flex;flex-wrap:wrap;gap:6px}.b{font-size:12px;border-radius:6px;padding:2px 8px;font-weight:600}
+.b.good{color:var(--good);background:var(--good-bg)}.b.bad{color:var(--bad);background:var(--soft)}
+.b.info{color:var(--info);background:var(--info-bg)}.b.pt{color:var(--pt);background:var(--pt-bg)}
+.b.muted{color:var(--muted);background:var(--soft);font-weight:500}
+.buy{display:block;text-align:center;text-decoration:none;background:var(--buy);color:var(--buy-fg);
+font-weight:700;font-size:16px;border-radius:10px;padding:12px}.buy:hover{background:var(--buy-hover)}
+.buy span{display:block;font-size:12px;font-weight:500;opacity:.9}
+.prline{font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.wbtn{align-self:flex-start;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:99px;
+padding:3px 10px;font-size:12px;cursor:pointer}.wbtn.on{border-color:var(--buy);color:var(--buy)}
+#watchlist:empty{display:none}#watchlist{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:14px 0 0}
+#watchlist li{font-size:14px;margin:4px 0}.amz{color:var(--info);text-decoration:none;font-weight:600}.sale{background:var(--pt-bg);color:var(--pt);border-radius:10px;
+padding:8px 12px;font-size:13px;margin:10px 0 0}.adslot{margin:24px 0}.tip{margin:12px 0 0;font-size:13px}
+details{border-top:1px solid var(--line);padding-top:8px}summary{cursor:pointer;font-size:13px;color:var(--info)}
+.alt{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:6px}
+.alt a{display:flex;justify-content:space-between;gap:10px;text-decoration:none;color:var(--fg);
+background:var(--soft);border-radius:8px;padding:8px 10px;font-size:13px}.alt a:hover{outline:1px solid var(--buy)}
+.alt b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.shopsearch{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}.shopsearch a{background:var(--soft);border-radius:8px;padding:6px 12px;font-size:13px;text-decoration:none;color:var(--fg)}.shopsearch a:hover{outline:1px solid var(--buy)}
+.shops li{margin:8px 0}.more{text-align:right;font-weight:600}.meta{font-size:12px;color:var(--muted)}
+svg{display:block;width:100%;height:140px;color:var(--good);background:var(--card);border-radius:10px}
+.pr{display:inline-block;background:var(--pr-bg);color:var(--pr);border-radius:8px;padding:3px 10px;font-size:12px;margin:8px 0 0}
+.followbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:28px 0 0}
+.followbox p{margin:0;font-weight:700}
+.follow{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}.follow a{font-size:13px;text-decoration:none;
+border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:99px;padding:5px 12px}
+.empty{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;background:var(--card)}
+td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:right}td:first-child,th:first-child{text-align:left}
+.verdict{border-radius:12px;padding:12px 14px;font-weight:600;margin:14px 0 0}
+.verdict.good{background:var(--good-bg);color:var(--good)}.verdict.muted{background:var(--soft);color:var(--muted)}
+.crumbs{margin:0 0 6px}.crumbs a{color:var(--muted)}
+footer{color:var(--muted);font-size:12px;margin:40px 0 0;border-top:1px solid var(--line);padding-top:12px}
+.topbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line)}
+.topbar .brand{font-weight:800;color:var(--fg);text-decoration:none;margin-right:auto}
+.topbar a.m{color:var(--fg);text-decoration:none;font-size:14px}.topbar a.m:hover{color:var(--buy)}
+.enter{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0 4px}
+.enter a{display:block;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);
+border-radius:14px;padding:14px}.enter a:hover{border-color:var(--buy)}.enter b{display:block;font-size:16px}
+.enter span{font-size:13px;color:var(--muted)}
+article.doc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;line-height:1.85}
+article.doc h2{margin-top:28px}article.doc table{margin:10px 0}article.doc li{margin:4px 0}
+.build{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 16px}
+.build h2{margin:0 0 4px}.total{font-size:30px;font-weight:800;margin:6px 0}.build td a{font-size:12px}
+.build td small{color:var(--muted)}.build td:nth-child(2),.build th:nth-child(2){text-align:left}.up{color:var(--bad)}.down{color:var(--good)}
+@media (max-width:520px){.hero h1{font-size:20px}.hero>p:first-of-type{font-size:13px}.price{font-size:26px}
+.grid{grid-template-columns:1fr}.nav{padding:8px 0}}
+</style><script data-goatcounter="https://pcpricewatch.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>var vc_pid = "892715994";</script><script src="//aml.valuecommerce.com/vcdal.js" async></script></head><body><main>
+<header class="topbar"><a class="brand" href="">PCパーツ底値ウォッチ</a>
+<a class="m" href="">価格比較</a><a class="m" href="builds.html">予算別構成</a>
+<a class="m" href="simulator.html">シミュレーター</a><a class="m" href="bto.html">自作vsBTO</a><a class="m" href="guides/">ガイド</a>
+<a class="m" href="market.html">週間相場</a></header>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "PCパーツ底値ウォッチ", "item": "https://fontom-ai.github.io/pc-price-watch/"}, {"@type": "ListItem", "position": 2, "name": "全ページ一覧"}]}]}</script>
+<div class="hero"><nav class="meta crumbs" aria-label="パンくず"><a href="">PCパーツ底値ウォッチ</a> ＞ 全ページ一覧</nav><h1>全ページ一覧</h1><p>当サイトのページをすべてまとめた索引です。</p></div>
+<h2>ツール・まとめ</h2><ul><li><a href="simulator.html">構成シミュレーター</a></li><li><a href="builds.html">予算別おすすめ構成</a></li><li><a href="bto.html">自作PCとBTOどっちが得？</a></li><li><a href="ranking.html">SSD・メモリの容量単価ランキング</a></li><li><a href="market.html">週間相場レポート</a></li><li><a href="shops.html">提携ショップ一覧</a></li><li><a href="data.html">価格データ（CSV）</a></li><li><a href="about.html">集計方法・運営者について</a></li></ul>
+<h2>パーツ別の最安値・価格推移</h2><h3><a href="c/gpu.html">グラフィックボード</a></h3><ul><li><a href="p/rtx5060.html">GeForce RTX 5060の最安値・価格推移</a></li><li><a href="p/rtx5060ti-16gb.html">GeForce RTX 5060 Ti 16GBの最安値・価格推移</a></li><li><a href="p/rtx5070.html">GeForce RTX 5070の最安値・価格推移</a></li><li><a href="p/rtx5070ti.html">GeForce RTX 5070 Tiの最安値・価格推移</a></li><li><a href="p/rtx5080.html">GeForce RTX 5080の最安値・価格推移</a></li><li><a href="p/rtx5090.html">GeForce RTX 5090の最安値・価格推移</a></li><li><a href="p/rx9070xt.html">Radeon RX 9070 XTの最安値・価格推移</a></li></ul><h3><a href="c/cpu.html">CPU</a></h3><ul><li><a href="p/ryzen7-9800x3d.html">Ryzen 7 9800X3Dの最安値・価格推移</a></li><li><a href="p/core-ultra7-265k.html">Core Ultra 7 265Kの最安値・価格推移</a></li><li><a href="p/ryzen5-9600x.html">Ryzen 5 9600Xの最安値・価格推移</a></li><li><a href="p/ryzen79700x.html">Ryzen 7 9700Xの最安値・価格推移</a></li><li><a href="p/coreultra7265.html">Core Ultra 7 265の最安値・価格推移</a></li></ul><h3><a href="c/memory.html">メモリ</a></h3><ul><li><a href="p/ddr5-32gb.html">DDR5 32GB (16GB×2)の最安値・価格推移</a></li><li><a href="p/ddr5-64gb.html">DDR5 64GB (32GB×2)の最安値・価格推移</a></li><li><a href="p/ddr4-32gb.html">DDR4 32GB (16GB×2)の最安値・価格推移</a></li><li><a href="p/mem-vengeance-ddr5-6000-32gb.html">CORSAIR VENGEANCE DDR5-6000 32GBの最安値・価格推移</a></li><li><a href="p/mem-furybeast-ddr5-6000-32gb.html">Kingston FURY Beast DDR5-6000 32GBの最安値・価格推移</a></li></ul><h3><a href="c/ssd.html">SSD</a></h3><ul><li><a href="p/nvme-1tb.html">NVMe SSD 1TBの最安値・価格推移</a></li><li><a href="p/nvme-2tb.html">NVMe SSD 2TBの最安値・価格推移</a></li><li><a href="p/nvme-4tb.html">NVMe SSD 4TBの最安値・価格推移</a></li><li><a href="p/ssd-990pro-2tb.html">Samsung 990 PRO 2TBの最安値・価格推移</a></li><li><a href="p/ssd-990evoplus-2tb.html">Samsung 990 EVO Plus 2TBの最安値・価格推移</a></li><li><a href="p/ssd-sn850x-2tb.html">WD_BLACK SN850X 2TBの最安値・価格推移</a></li><li><a href="p/ssd-t500-2tb.html">Crucial T500 2TBの最安値・価格推移</a></li><li><a href="p/ssd-nm790-2tb.html">Lexar NM790 2TBの最安値・価格推移</a></li><li><a href="p/ssd-p3plus-1tb.html">Crucial P3 Plus 1TBの最安値・価格推移</a></li></ul><h3><a href="c/mb.html">マザーボード</a></h3><ul><li><a href="p/mb-b650.html">B650 マザーボード（AM5）の最安値・価格推移</a></li><li><a href="p/mb-b860.html">B860 マザーボード（LGA1851）の最安値・価格推移</a></li></ul><h3><a href="c/psu.html">電源ユニット</a></h3><ul><li><a href="p/psu-750-gold.html">電源 750W 80PLUS Goldの最安値・価格推移</a></li><li><a href="p/psu-850-gold.html">電源 850W 80PLUS Goldの最安値・価格推移</a></li><li><a href="p/psu-msi-a850gl.html">MSI MAG A850GL PCIE5の最安値・価格推移</a></li><li><a href="p/psu-corsair-rm850e.html">CORSAIR RM850eの最安値・価格推移</a></li><li><a href="p/psu-kuroutoshikou-ga850w.html">玄人志向 KRPW-GA850W/90+の最安値・価格推移</a></li></ul><h3><a href="c/case.html">PCケース</a></h3><ul><li><a href="p/case-midtower.html">ミドルタワー PCケースの最安値・価格推移</a></li><li><a href="p/case-thermaltake-versa-h26.html">Thermaltake Versa H26の最安値・価格推移</a></li><li><a href="p/case-fractal-pop-air.html">Fractal Design Pop Airの最安値・価格推移</a></li><li><a href="p/case-lianli-lancool-207.html">Lian Li LANCOOL 207の最安値・価格推移</a></li></ul><h3><a href="c/cooler.html">CPUクーラー</a></h3><ul><li><a href="p/cooler-air.html">空冷CPUクーラー（サイドフロー）の最安値・価格推移</a></li><li><a href="p/cooler-deepcool-ak400.html">DEEPCOOL AK400の最安値・価格推移</a></li><li><a href="p/cooler-thermalright-pa120se.html">Thermalright Peerless Assassin 120 SEの最安値・価格推移</a></li></ul><h3><a href="c/monitor.html">ゲーミングモニター</a></h3><ul><li><a href="p/monitor-27-wqhd.html">ゲーミングモニター 27インチ WQHDの最安値・価格推移</a></li><li><a href="p/monitor-24-fhd.html">ゲーミングモニター 24インチ フルHDの最安値・価格推移</a></li><li><a href="p/monitor-pixio-px278wave.html">Pixio PX278WAVEの最安値・価格推移</a></li></ul><h3><a href="c/bto.html">BTOゲーミングPC</a></h3><ul><li><a href="p/bto-rtx5060.html">BTOゲーミングPC（RTX 5060搭載）の最安値・価格推移</a></li><li><a href="p/bto-rtx5070.html">BTOゲーミングPC（RTX 5070搭載）の最安値・価格推移</a></li><li><a href="p/bto-rtx5070ti.html">BTOゲーミングPC（RTX 5070 Ti搭載）の最安値・価格推移</a></li></ul>
+<h2>自作PCガイド</h2><ul><li><a href="guides/assembly-steps.html">自作PCの組み立て手順：失敗しない順番とチェックポイント</a></li><li><a href="guides/cooling-guide.html">CPUクーラーとケースファンの選び方：空冷・水冷・エアフローの基本</a></li><li><a href="guides/cpu-guide.html">CPUの選び方：Ryzen 9000とCore Ultra 200Sの違いと型番の読み方</a></li><li><a href="guides/memory-guide.html">メモリの選び方：DDR5の容量・速度・XMP／EXPOの基本</a></li><li><a href="guides/monitor-guide.html">ゲーミングモニターの選び方：サイズ・解像度・リフレッシュレート・パネル</a></li><li><a href="guides/motherboard-guide.html">マザーボードの選び方：チップセット・サイズ・M.2・BIOSの確認ポイント</a></li><li><a href="guides/used-pc-guide.html">中古PC・ミニPCの選び方：失敗しない確認ポイントとショップの探し方</a></li><li><a href="guides/when-to-buy.html">PCパーツの買い時の見極め方：価格の推移・セール・ポイントの考え方</a></li><li><a href="guides/windows-guide.html">自作PCのWindows：入手方法・ライセンスの種類・インストールの流れ</a></li><li><a href="guides/pc-migration.html">新しいPCへの乗り換え：データ移行と古いPCの処分</a></li><li><a href="guides/first-build.html">はじめての自作PC：必要なパーツと選ぶ順番</a></li><li><a href="guides/gpu-guide.html">グラボの選び方：RTX 50シリーズとRadeon RX 9000</a></li><li><a href="guides/price-surge-2026.html">2026年のメモリ・SSD高騰、いつ・どう買う？</a></li><li><a href="guides/psu-case-guide.html">電源ユニットとPCケースの選び方</a></li><li><a href="guides/ssd-guide.html">SSDの選び方：容量単価とGen3・Gen4・Gen5の違い</a></li></ul>
+<footer>
+<p>本ページはアフィリエイト広告（楽天アフィリエイト、バリューコマース）を利用しています。リンク先で購入されると運営者に紹介料が支払われますが、価格や掲載順には影響しません。Amazonのアソシエイトとして、PCパーツ底値ウォッチは適格販売により収入を得ています。</p>
+<p>表示価格は取得時点のもので、現在の価格・在庫・送料とは異なる場合があります。購入前に必ずリンク先のショップでご確認ください。条件（容量・型番など）で自動抽出しているため、まれに対象外の商品が含まれることがあります。</p>
+<p>過去の価格推移は日ごとの最安値のみを保存しています。アクセス解析にGoatCounter（Cookie不使用・個人を特定する情報は収集しません）を利用しています。</p>
+<p><a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener">Supported by Rakuten Developers</a>
+ ・ <a href="https://developer.yahoo.co.jp/sitemap/" target="_blank" rel="noopener">Webサービス by Yahoo! JAPAN</a>
+ ・ <a href="feed.xml">RSS</a> ・ <a href="about.html">集計方法・運営者</a>
+ ・ <a href="data.html">価格データ</a>
+ ・ <a href="shops.html">提携ショップ</a> ・ <a href="index-all.html">全ページ一覧</a></p>
+<p>
+ <a href="privacy.html">プライバシーポリシー</a></p>
+</footer></main><script>
+(function(){const K='pcw-watch';let W={};try{W=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(W))}catch(e){}};
+document.querySelectorAll('.wbtn').forEach(b=>{const s=b.dataset.watch;const on=()=>{b.classList.toggle('on',!!W[s]);b.textContent=W[s]?'★ ウォッチ中':'☆ ウォッチ';};on();
+ b.addEventListener('click',()=>{if(W[s])delete W[s];else W[s]={name:b.dataset.name,price:+b.dataset.price,seen:+b.dataset.price};save();on();});});
+const box=document.getElementById('watchlist');if(!box||!Object.keys(W).length)return;
+fetch(box.dataset.src).then(r=>r.json()).then(P=>{const rows=Object.entries(W).map(([s,w])=>{const p=P[s];if(!p)return '';
+ const d=p.price-w.seen;const t=d<0?`<b class="down">前回見たときより${(-d).toLocaleString()}円安い</b>`:d>0?`<span class="up">前回より${d.toLocaleString()}円高い</span>`:'変化なし';
+ w.seen=p.price;return `<li><a href="${box.dataset.root}p/${s}.html">${w.name}</a>：¥${p.price.toLocaleString()}（${t}）</li>`;}).join('');
+ save();box.innerHTML=`<b>ウォッチ中のパーツ</b><ul>${rows}</ul><p class="meta">この一覧はお使いのブラウザにだけ保存されています。</p>`;}).catch(()=>{});})();
+</script></body></html>

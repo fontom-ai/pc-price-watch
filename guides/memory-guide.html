@@ -1,0 +1,213 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>メモリの選び方：DDR5の容量・速度・XMP／EXPOの基本 | PCパーツ底値ウォッチ</title>
+<meta name="description" content="デスクトップPC用メモリの選び方を、DDR4とDDR5の違い、容量、2枚組、速度表記、XMP／EXPOの設定まで初心者向けに解説します。"><link rel="canonical" href="https://fontom-ai.github.io/pc-price-watch/guides/memory-guide.html"><meta property="og:site_name" content="PCパーツ底値ウォッチ"><meta property="og:locale" content="ja_JP"><meta name="twitter:title" content="メモリの選び方：DDR5の容量・速度・XMP／EXPOの基本 | PCパーツ底値ウォッチ"><meta name="twitter:description" content="デスクトップPC用メモリの選び方を、DDR4とDDR5の違い、容量、2枚組、速度表記、XMP／EXPOの設定まで初心者向けに解説します。"><meta property="og:title" content="メモリの選び方：DDR5の容量・速度・XMP／EXPOの基本 | PCパーツ底値ウォッチ"><meta property="og:type" content="website"><meta property="og:description" content="デスクトップPC用メモリの選び方を、DDR4とDDR5の違い、容量、2枚組、速度表記、XMP／EXPOの設定まで初心者向けに解説します。"><meta property="og:url" content="https://fontom-ai.github.io/pc-price-watch/guides/memory-guide.html"><meta property="og:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png"><meta property="og:image:alt" content="メモリの選び方：DDR5の容量・速度・XMP／EXPOの基本 | PCパーツ底値ウォッチ"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png">
+<link rel="alternate" type="application/atom+xml" title="値下がり情報" href="../feed.xml">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#14161a;--muted:#5f6670;--line:#e4e7ec;--soft:#f1f3f6;
+--buy:#e8590c;--buy-fg:#fff;--buy-hover:#c94a06;--good:#0b7a53;--good-bg:#e3f5ec;--bad:#b42318;
+--info:#1d4ed8;--info-bg:#e8efff;--pt:#9a3412;--pt-bg:#fff1e6;--pr:#7a5b00;--pr-bg:#fff7db}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#181b21;--fg:#eceef2;--muted:#9aa3ae;
+--line:#2a2f37;--soft:#20242b;--buy:#f76707;--buy-hover:#ff7a1a;--good:#4ade80;--good-bg:#12301f;
+--bad:#f87171;--info:#93b4ff;--info-bg:#18223a;--pt:#fdba74;--pt-bg:#3a2210;--pr:#f3d57a;--pr-bg:#332a0c}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
+main{max-width:1080px;margin:0 auto;padding:0 16px 24px}a{color:var(--info)}
+.hero{padding:18px 0 4px}.hero h1{font-size:24px;line-height:1.3;margin:0 0 4px}
+.hero p{margin:0;color:var(--muted)}.trust{font-size:12px;color:var(--muted);margin:6px 0 0}
+.nav{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;gap:8px;overflow-x:auto}
+.nav a{flex:0 0 auto;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);
+border-radius:99px;padding:6px 14px;font-size:14px}.nav a:hover{border-color:var(--buy)}
+h2{font-size:18px;margin:26px 0 12px;scroll-margin-top:60px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;
+flex-direction:column;gap:10px;scroll-margin-top:60px}.card.pick{border:2px solid var(--buy)}
+.top{display:flex;gap:12px;align-items:flex-start}.thumb{width:88px;height:88px;flex:0 0 88px;border-radius:10px;
+background:#fff;border:1px solid var(--line);object-fit:contain}
+.kind{font-size:12px;color:var(--muted);margin:0}.title{font-size:15px;font-weight:700;margin:2px 0 0;line-height:1.4}
+.title a{color:var(--fg);text-decoration:none}.item{font-size:12.5px;color:var(--muted);margin:4px 0 0;
+display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.price{font-size:28px;font-weight:800;letter-spacing:-.01em;font-variant-numeric:tabular-nums;line-height:1.1}
+.price small{font-size:13px;font-weight:500;color:var(--muted);margin-left:6px}
+.badges{display:flex;flex-wrap:wrap;gap:6px}.b{font-size:12px;border-radius:6px;padding:2px 8px;font-weight:600}
+.b.good{color:var(--good);background:var(--good-bg)}.b.bad{color:var(--bad);background:var(--soft)}
+.b.info{color:var(--info);background:var(--info-bg)}.b.pt{color:var(--pt);background:var(--pt-bg)}
+.b.muted{color:var(--muted);background:var(--soft);font-weight:500}
+.buy{display:block;text-align:center;text-decoration:none;background:var(--buy);color:var(--buy-fg);
+font-weight:700;font-size:16px;border-radius:10px;padding:12px}.buy:hover{background:var(--buy-hover)}
+.buy span{display:block;font-size:12px;font-weight:500;opacity:.9}
+.prline{font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.wbtn{align-self:flex-start;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:99px;
+padding:3px 10px;font-size:12px;cursor:pointer}.wbtn.on{border-color:var(--buy);color:var(--buy)}
+#watchlist:empty{display:none}#watchlist{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:14px 0 0}
+#watchlist li{font-size:14px;margin:4px 0}.amz{color:var(--info);text-decoration:none;font-weight:600}.sale{background:var(--pt-bg);color:var(--pt);border-radius:10px;
+padding:8px 12px;font-size:13px;margin:10px 0 0}.adslot{margin:24px 0}.tip{margin:12px 0 0;font-size:13px}
+details{border-top:1px solid var(--line);padding-top:8px}summary{cursor:pointer;font-size:13px;color:var(--info)}
+.alt{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:6px}
+.alt a{display:flex;justify-content:space-between;gap:10px;text-decoration:none;color:var(--fg);
+background:var(--soft);border-radius:8px;padding:8px 10px;font-size:13px}.alt a:hover{outline:1px solid var(--buy)}
+.alt b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.shopsearch{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}.shopsearch a{background:var(--soft);border-radius:8px;padding:6px 12px;font-size:13px;text-decoration:none;color:var(--fg)}.shopsearch a:hover{outline:1px solid var(--buy)}
+.shops li{margin:8px 0}.more{text-align:right;font-weight:600}.meta{font-size:12px;color:var(--muted)}
+svg{display:block;width:100%;height:140px;color:var(--good);background:var(--card);border-radius:10px}
+.pr{display:inline-block;background:var(--pr-bg);color:var(--pr);border-radius:8px;padding:3px 10px;font-size:12px;margin:8px 0 0}
+.followbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:28px 0 0}
+.followbox p{margin:0;font-weight:700}
+.follow{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}.follow a{font-size:13px;text-decoration:none;
+border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:99px;padding:5px 12px}
+.empty{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;background:var(--card)}
+td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:right}td:first-child,th:first-child{text-align:left}
+.verdict{border-radius:12px;padding:12px 14px;font-weight:600;margin:14px 0 0}
+.verdict.good{background:var(--good-bg);color:var(--good)}.verdict.muted{background:var(--soft);color:var(--muted)}
+.crumbs{margin:0 0 6px}.crumbs a{color:var(--muted)}
+footer{color:var(--muted);font-size:12px;margin:40px 0 0;border-top:1px solid var(--line);padding-top:12px}
+.topbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line)}
+.topbar .brand{font-weight:800;color:var(--fg);text-decoration:none;margin-right:auto}
+.topbar a.m{color:var(--fg);text-decoration:none;font-size:14px}.topbar a.m:hover{color:var(--buy)}
+.enter{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0 4px}
+.enter a{display:block;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);
+border-radius:14px;padding:14px}.enter a:hover{border-color:var(--buy)}.enter b{display:block;font-size:16px}
+.enter span{font-size:13px;color:var(--muted)}
+article.doc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;line-height:1.85}
+article.doc h2{margin-top:28px}article.doc table{margin:10px 0}article.doc li{margin:4px 0}
+.build{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 16px}
+.build h2{margin:0 0 4px}.total{font-size:30px;font-weight:800;margin:6px 0}.build td a{font-size:12px}
+.build td small{color:var(--muted)}.build td:nth-child(2),.build th:nth-child(2){text-align:left}.up{color:var(--bad)}.down{color:var(--good)}
+@media (max-width:520px){.hero h1{font-size:20px}.hero>p:first-of-type{font-size:13px}.price{font-size:26px}
+.grid{grid-template-columns:1fr}.nav{padding:8px 0}}
+</style><script data-goatcounter="https://pcpricewatch.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>var vc_pid = "892715994";</script><script src="//aml.valuecommerce.com/vcdal.js" async></script></head><body><main>
+<header class="topbar"><a class="brand" href="../">PCパーツ底値ウォッチ</a>
+<a class="m" href="../">価格比較</a><a class="m" href="../builds.html">予算別構成</a>
+<a class="m" href="../simulator.html">シミュレーター</a><a class="m" href="../bto.html">自作vsBTO</a><a class="m" href="../guides/">ガイド</a>
+<a class="m" href="../market.html">週間相場</a></header>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "PCパーツ底値ウォッチ", "item": "https://fontom-ai.github.io/pc-price-watch/"}, {"@type": "ListItem", "position": 2, "name": "自作PCガイド", "item": "https://fontom-ai.github.io/pc-price-watch/guides/"}, {"@type": "ListItem", "position": 3, "name": "メモリの選び方：DDR5の容量・速度・XMP／EXPOの基本"}]}, {"@type": "Article", "headline": "メモリの選び方：DDR5の容量・速度・XMP／EXPOの基本", "description": "デスクトップPC用メモリの選び方を、DDR4とDDR5の違い、容量、2枚組、速度表記、XMP／EXPOの設定まで初心者向けに解説します。", "datePublished": "2026-10-02T09:00:00+09:00", "dateModified": "2026-10-02T09:00:00+09:00", "image": ["https://fontom-ai.github.io/pc-price-watch/og/site.png"], "inLanguage": "ja", "author": {"@type": "Organization", "name": "PCパーツ底値ウォッチ", "url": "https://fontom-ai.github.io/pc-price-watch/about.html"}, "publisher": {"@type": "Organization", "name": "PCパーツ底値ウォッチ", "url": "https://fontom-ai.github.io/pc-price-watch/"}}]}</script>
+<div class="hero"><nav class="meta crumbs" aria-label="パンくず"><a href="../">PCパーツ底値ウォッチ</a> ＞ <a href="../guides/">自作PCガイド</a> ＞ メモリの選び方：DDR5の容量・速度・XMP／EXPOの基本</nav><h1>メモリの選び方：DDR5の容量・速度・XMP／EXPOの基本</h1>
+<p class="meta">公開日 2026-10-02 ・ 最終更新 2026-10-02</p>
+<p>デスクトップPC用メモリの選び方を、DDR4とDDR5の違い、容量、2枚組、速度表記、XMP／EXPOの設定まで初心者向けに解説します。</p><p class="pr">【PR】本ページはアフィリエイト広告を利用しています</p></div>
+<article class="doc"><p>メモリは「作業机の広さ」にたとえられるパーツです。足りないと動作が重くなりますが、必要以上に積んでも体感は変わりません。選ぶときは、<strong>規格・容量・枚数・速度</strong>の4つを順に決めると迷いません。</p>
+<h2>1. まず規格：DDR4かDDR5か</h2>
+<p>メモリの規格は、マザーボードとCPUで決まります。<strong>DDR4とDDR5は形が違い、互換性がありません。</strong></p>
+<ul>
+<li>Ryzen 9000シリーズ（AM5）やCore Ultra 200S（LGA1851）：<strong>DDR5専用</strong></li>
+<li>以前のプラットフォーム：DDR4のものが多い</li>
+</ul>
+<p>新しく組むなら、DDR5を選ぶことになります。DDR4の方が安く見えても、新しいCPUには挿せません。メモリ価格の動きは<a href="price-surge-2026.html">メモリ高騰の解説</a>にまとめています。</p>
+<h2>2. 容量：16GB・32GB・64GBの目安</h2>
+<table>
+<thead>
+<tr>
+<th>容量</th>
+<th>向いている使い方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16GB</td>
+<td>事務作業、ゲーム中心（ゲームによっては余裕が少ないことも）</td>
+</tr>
+<tr>
+<td>32GB</td>
+<td>ゲームと配信・動画編集・多くのタブを開く使い方。迷ったらここ</td>
+</tr>
+<tr>
+<td>64GB</td>
+<td>動画編集・3D・仮想マシンなど、重い作業</td>
+</tr>
+</tbody>
+</table>
+<p>最近のゲームや、ブラウザとゲームを同時に使う場合は、32GBだと余裕があります。</p>
+<h2>3. 枚数：2枚組（デュアルチャネル）が基本</h2>
+<p>同じ容量のメモリを<strong>2枚</strong>挿すと、「デュアルチャネル」で動き、1枚挿しより帯域が広がります。32GBなら<strong>16GB×2枚のキット</strong>が定番です。</p>
+<p>4枚挿しは容量を増やせますが、DDR5では、2枚のときより速度が出にくくなる場合があります。可能なら、最初から大きめの容量の2枚組を選ぶ方法もあります。</p>
+<h2>4. 速度の表記を読む</h2>
+<p>製品名の「DDR5-6000」などは、動作速度の目安です（単位はMT/s）。<strong>数字が大きいほど速い</strong>ですが、対応するCPUやマザーボードの範囲でしか出せません。</p>
+<ul>
+<li>「CL36」などの数字は、応答の遅延を表すレイテンシ（CAS Latency）です。小さいほど有利ですが、実際の体感差は大きくありません。</li>
+<li>Ryzen 9000シリーズでは、DDR5-6000前後が組み合わせやすいとされています。購入前に、マザーボードのメーカーが公開している<strong>対応メモリ（QVL）</strong>を確認すると安心です。</li>
+</ul>
+<h2>5. XMP・EXPOを有効にする</h2>
+<p>DDR5メモリは、<strong>挿しただけだと定格の遅い速度で動く</strong>ことがあります。表記どおりの速度で使うには、BIOSで設定を有効にします。</p>
+<ul>
+<li>Intel向け：<strong>XMP</strong></li>
+<li>AMD向け：<strong>EXPO</strong></li>
+<li>どちらにも対応した製品もあります。</li>
+</ul>
+<p>BIOSのメモリ設定で、該当のプロファイルを選ぶだけです。</p>
+<h2>6. 買うときの確認ポイント</h2>
+<ul>
+<li>「2枚組」「キット」と書かれているか（1枚だけの商品もあります）</li>
+<li>容量が「合計」か「1枚あたり」か</li>
+<li>ノートPC用（SO-DIMM）ではなく、<strong>デスクトップ用（DIMM）</strong>か</li>
+<li>ヒートシンクや背の高さ。背の高いCPUクーラーと干渉することがあります（<a href="cooling-guide.html">CPUクーラーの選び方</a>）</li>
+</ul>
+<h2>当サイトでの価格の見方</h2>
+<p><a href="../p/ddr5-32gb.html">DDR5 32GB（16GB×2）</a>や<a href="../p/ddr5-64gb.html">DDR5 64GB</a>の最安値と推移を、2時間ごとに更新しています。容量あたりの割安さは<a href="../ranking.html">容量単価ランキング</a>で比べられます。</p></article>
+<h2>この記事で紹介したパーツの最安値</h2><div class="grid"><article class="card" id="ddr5-32gb">
+<div class="top"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/iikakaku-officialstore/cabinet/13009160/imgrc0138275943.jpg?_ex=240x240" alt="DDR5 32GB (16GB×2)" loading="lazy" width="88" height="88"><div><p class="kind">メモリ</p>
+<p class="title"><a href="../p/ddr5-32gb.html">DDR5 32GB (16GB×2)</a></p>
+<p class="item">DDR5 32GB-6000MHz デスクトップPC用メモリ(16GB×2枚 PC5-48000)白ヒートシンク付きシリーズ…</p></div></div>
+<div class="price">¥56,500<small>1,765.6円/GB</small></div>
+<button type="button" class="wbtn" data-watch="ddr5-32gb" data-name="DDR5 32GB (16GB×2)" data-price="56500">☆ ウォッチ</button>
+<div class="badges"><span class="b bad">前日比 ▲5,820円</span><span class="b bad">高値圏</span><span class="b info">送料無料</span></div>
+<a class="buy" href="https://hb.afl.rakuten.co.jp/hgc/g00uu6vo.dvi7df12.g00uu6vo.dvi7e506/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fiikakaku-officialstore%2Fx0014r0xir%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fiikakaku-officialstore%2Fi%2F10000879%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ddr5-32gb/rakuten" data-goatcounter-title="DDR5 32GB (16GB×2)">楽天市場で見る →<span>iiKaKaKu Official Store</span></a>
+<div class="prline">PR・楽天市場／Yahoo!ショッピングの新品最安値（取得時点）<a class="amz" href="https://www.amazon.co.jp/s?k=DDR5%2032GB%20%2816GB%C3%972%29&amp;tag=a0c20-22" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/amazon/DDR5 32GB (16GB×2)">Amazonで探す（PR）</a></div>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00uqi8o.dvi7dec4.g00uqi8o.dvi7e93f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsakuraya-online%2Fb0c5kwv5g7%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsakuraya-online%2Fi%2F10033636%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ddr5-32gb/rakuten" data-goatcounter-title="DDR5 32GB (16GB×2)"><span>櫻屋オンライン楽天市場店（楽天市場）</span><b>¥57,870</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00u90ko.dvi7dc81.g00u90ko.dvi7e3db/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fiikakakustore%2Fx0014r0xir%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fiikakakustore%2Fi%2F10001739%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ddr5-32gb/rakuten" data-goatcounter-title="DDR5 32GB (16GB×2)"><span>いい価格デジタルストア（楽天市場） ・送料無料</span><b>¥59,800</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00us8po.dvi7de4c.g00us8po.dvi7ee0d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgoodsstreet%2Fb0cv7qkc8s%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fgoodsstreet%2Fi%2F10089995%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ddr5-32gb/rakuten" data-goatcounter-title="DDR5 32GB (16GB×2)"><span>goods street（楽天市場）</span><b>¥61,940</b></a></li></ul></details>
+<div class="meta">9/25以降の最安 ¥38,000 ・ 10/2 11:18時点 ・ <a href="../p/ddr5-32gb.html">価格推移を見る</a></div>
+</article><article class="card" id="ddr5-64gb">
+<div class="top"><img class="thumb" src="https://item-shopping.c.yimg.jp/i/g/three-star_4988755071550" alt="DDR5 64GB (32GB×2)" loading="lazy" width="88" height="88"><div><p class="kind">メモリ</p>
+<p class="title"><a href="../p/ddr5-64gb.html">DDR5 64GB (32GB×2)</a></p>
+<p class="item">W5U6400CS-32GC38F CFD Standard DDR5-6400 64GB (32GB×2) CL38 グラフ…</p></div></div>
+<div class="price">¥135,800<small>2,121.9円/GB</small></div>
+<button type="button" class="wbtn" data-watch="ddr5-64gb" data-name="DDR5 64GB (32GB×2)" data-price="135800">☆ ウォッチ</button>
+<div class="badges"><span class="b bad">前日比 ▲1,555円</span><span class="b bad">高値圏</span><span class="b info">送料無料</span></div>
+<a class="buy" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fthree-star%2F4988755071550.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ddr5-64gb/yahoo" data-goatcounter-title="DDR5 64GB (32GB×2)">Yahoo!ショッピングで見る →<span>スリースター商事</span></a>
+<div class="prline">PR・楽天市場／Yahoo!ショッピングの新品最安値（取得時点）<a class="amz" href="https://www.amazon.co.jp/s?k=DDR5%2064GB%20%2832GB%C3%972%29&amp;tag=a0c20-22" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/amazon/DDR5 64GB (32GB×2)">Amazonで探す（PR）</a></div>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00umz1o.dvi7dd6e.g00umz1o.dvi7e5e5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcomastoric%2Fs-b0f6c2q7fr-20260607%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fcomastoric%2Fi%2F10017263%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ddr5-64gb/rakuten" data-goatcounter-title="DDR5 64GB (32GB×2)"><span>Comastoric（楽天市場） ・送料無料</span><b>¥136,400</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fwindoor128%2F6286.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ddr5-64gb/yahoo" data-goatcounter-title="DDR5 64GB (32GB×2)"><span>WINTEN WINDOOR店（Yahoo!ショッピング） ・送料無料</span><b>¥141,780</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00umz1o.dvi7dd6e.g00umz1o.dvi7e5e5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcomastoric%2Fs-b0c2vf44zt-20260607%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fcomastoric%2Fi%2F10017513%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/ddr5-64gb/rakuten" data-goatcounter-title="DDR5 64GB (32GB×2)"><span>Comastoric（楽天市場） ・送料無料</span><b>¥143,728</b></a></li></ul></details>
+<div class="meta">9/25以降の最安 ¥134,245 ・ 10/2 11:18時点 ・ <a href="../p/ddr5-64gb.html">価格推移を見る</a></div>
+</article><article class="card" id="mem-vengeance-ddr5-6000-32gb">
+<div class="top"><img class="thumb" src="https://item-shopping.c.yimg.jp/i/g/bnt_cmh32gx5m2e6000c36" alt="CORSAIR VENGEANCE DDR5-6000 32GB" loading="lazy" width="88" height="88"><div><p class="kind">メモリ</p>
+<p class="title"><a href="../p/mem-vengeance-ddr5-6000-32gb.html">CORSAIR VENGEANCE DDR5-6000 32GB</a></p>
+<p class="item">CORSAIR VENGEANCE RGB DDR5 CMH32GX5M2E6000C36 DDR5 32GB(16GB×2)…</p></div></div>
+<div class="price">¥71,500<small>2,234.4円/GB</small></div>
+<button type="button" class="wbtn" data-watch="mem-vengeance-ddr5-6000-32gb" data-name="CORSAIR VENGEANCE DDR5-6000 32GB" data-price="71500">☆ ウォッチ</button>
+<div class="badges"><span class="b good">最安値更新</span><span class="b info">送料無料</span></div>
+<a class="buy" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fbnt%2Fcmh32gx5m2e6000c36.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/mem-vengeance-ddr5-6000-32gb/yahoo" data-goatcounter-title="CORSAIR VENGEANCE DDR5-6000 32GB">Yahoo!ショッピングで見る →<span>BNT</span></a>
+<div class="prline">PR・楽天市場／Yahoo!ショッピングの新品最安値（取得時点）<a class="amz" href="https://www.amazon.co.jp/s?k=CORSAIR%20VENGEANCE%20DDR5-6000%2032GB&amp;tag=a0c20-22" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/amazon/CORSAIR VENGEANCE DDR5-6000 32GB">Amazonで探す（PR）</a></div>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00r46uo.dvi7dca7.g00r46uo.dvi7e260/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funiform-funs%2F0840006674900-01%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Funiform-funs%2Fi%2F10001410%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/mem-vengeance-ddr5-6000-32gb/rakuten" data-goatcounter-title="CORSAIR VENGEANCE DDR5-6000 32GB"><span>ファンズ（楽天市場） ・送料無料</span><b>¥79,580</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fulu-y%2F0840006674900.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/mem-vengeance-ddr5-6000-32gb/yahoo" data-goatcounter-title="CORSAIR VENGEANCE DDR5-6000 32GB"><span>ウルストア ヤフーショッピング店（Yahoo!ショッピング） ・送料無料</span><b>¥79,584</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00uqi8o.dvi7dec4.g00uqi8o.dvi7e93f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsakuraya-online%2Fb0bzhw15kf%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsakuraya-online%2Fi%2F10033490%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/mem-vengeance-ddr5-6000-32gb/rakuten" data-goatcounter-title="CORSAIR VENGEANCE DDR5-6000 32GB"><span>櫻屋オンライン楽天市場店（楽天市場）</span><b>¥80,850</b></a></li></ul></details>
+<div class="meta">9/29以降の最安 ¥71,500 ・ 10/2 10:18時点 ・ <a href="../p/mem-vengeance-ddr5-6000-32gb.html">価格推移を見る</a></div>
+</article><article class="card" id="mem-furybeast-ddr5-6000-32gb">
+<div class="top"><img class="thumb" src="https://item-shopping.c.yimg.jp/i/g/maruyuu-syouten_4344-000099" alt="Kingston FURY Beast DDR5-6000 32GB" loading="lazy" width="88" height="88"><div><p class="kind">メモリ</p>
+<p class="title"><a href="../p/mem-furybeast-ddr5-6000-32gb.html">Kingston FURY Beast DDR5-6000 32GB</a></p>
+<p class="item">Kingston FURY Beast ブラック DDR5 32GB (2x16GB) 6000MT/s CL36 DIMM…</p></div></div>
+<div class="price">¥99,600<small>3,112.5円/GB</small></div>
+<button type="button" class="wbtn" data-watch="mem-furybeast-ddr5-6000-32gb" data-name="Kingston FURY Beast DDR5-6000 32GB" data-price="99600">☆ ウォッチ</button>
+<div class="badges"><span class="b good">最安値更新</span><span class="b info">送料無料</span></div>
+<a class="buy" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fmaruyuu-syouten%2F4344-000099.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/mem-furybeast-ddr5-6000-32gb/yahoo" data-goatcounter-title="Kingston FURY Beast DDR5-6000 32GB">Yahoo!ショッピングで見る →<span>マルユウ商店</span></a>
+<div class="prline">PR・楽天市場／Yahoo!ショッピングの新品最安値（取得時点）<a class="amz" href="https://www.amazon.co.jp/s?k=Kingston%20FURY%20Beast%20DDR5-6000%2032GB&amp;tag=a0c20-22" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/amazon/Kingston FURY Beast DDR5-6000 32GB">Amazonで探す（PR）</a></div>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00u59to.dvi7d852.g00u59to.dvi7e8c0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgoodwoods%2Frhzdcvthem5ys%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fgoodwoods%2Fi%2F10337663%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/mem-furybeast-ddr5-6000-32gb/rakuten" data-goatcounter-title="Kingston FURY Beast DDR5-6000 32GB"><span>KIRARI store（楽天市場）</span><b>¥108,631</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Folg%2Fb0f8p6r75r.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/mem-furybeast-ddr5-6000-32gb/yahoo" data-goatcounter-title="Kingston FURY Beast DDR5-6000 32GB"><span>オーエルジー（Yahoo!ショッピング） ・送料無料</span><b>¥140,200</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Folg%2Fb0dckbgbtp.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/mem-furybeast-ddr5-6000-32gb/yahoo" data-goatcounter-title="Kingston FURY Beast DDR5-6000 32GB"><span>オーエルジー（Yahoo!ショッピング） ・送料無料</span><b>¥148,700</b></a></li></ul></details>
+<div class="meta">9/29以降の最安 ¥99,600 ・ 10/2 10:18時点 ・ <a href="../p/mem-furybeast-ddr5-6000-32gb.html">価格推移を見る</a></div>
+</article></div>
+<div class="followbox"><p>値下がりをいち早く知る</p><div class="follow"><a href="https://bsky.app/profile/fontom-watcher.bsky.social" rel="noopener">Blueskyで値下がり速報</a><a href="https://www.threads.com/@fal_philosophy" rel="noopener">Threadsで値下がり速報</a><a href="https://x.com/pcpartswatcher1" rel="noopener">X</a></div></div>
+<footer>
+<p>本ページはアフィリエイト広告（楽天アフィリエイト、バリューコマース）を利用しています。リンク先で購入されると運営者に紹介料が支払われますが、価格や掲載順には影響しません。Amazonのアソシエイトとして、PCパーツ底値ウォッチは適格販売により収入を得ています。</p>
+<p>表示価格は取得時点のもので、現在の価格・在庫・送料とは異なる場合があります。購入前に必ずリンク先のショップでご確認ください。条件（容量・型番など）で自動抽出しているため、まれに対象外の商品が含まれることがあります。</p>
+<p>過去の価格推移は日ごとの最安値のみを保存しています。アクセス解析にGoatCounter（Cookie不使用・個人を特定する情報は収集しません）を利用しています。</p>
+<p><a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener">Supported by Rakuten Developers</a>
+ ・ <a href="https://developer.yahoo.co.jp/sitemap/" target="_blank" rel="noopener">Webサービス by Yahoo! JAPAN</a>
+ ・ <a href="../feed.xml">RSS</a> ・ <a href="../about.html">集計方法・運営者</a>
+ ・ <a href="../data.html">価格データ</a>
+ ・ <a href="../shops.html">提携ショップ</a> ・ <a href="../index-all.html">全ページ一覧</a></p>
+<p>
+ <a href="../privacy.html">プライバシーポリシー</a></p>
+</footer></main><script>
+(function(){const K='pcw-watch';let W={};try{W=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(W))}catch(e){}};
+document.querySelectorAll('.wbtn').forEach(b=>{const s=b.dataset.watch;const on=()=>{b.classList.toggle('on',!!W[s]);b.textContent=W[s]?'★ ウォッチ中':'☆ ウォッチ';};on();
+ b.addEventListener('click',()=>{if(W[s])delete W[s];else W[s]={name:b.dataset.name,price:+b.dataset.price,seen:+b.dataset.price};save();on();});});
+const box=document.getElementById('watchlist');if(!box||!Object.keys(W).length)return;
+fetch(box.dataset.src).then(r=>r.json()).then(P=>{const rows=Object.entries(W).map(([s,w])=>{const p=P[s];if(!p)return '';
+ const d=p.price-w.seen;const t=d<0?`<b class="down">前回見たときより${(-d).toLocaleString()}円安い</b>`:d>0?`<span class="up">前回より${d.toLocaleString()}円高い</span>`:'変化なし';
+ w.seen=p.price;return `<li><a href="${box.dataset.root}p/${s}.html">${w.name}</a>：¥${p.price.toLocaleString()}（${t}）</li>`;}).join('');
+ save();box.innerHTML=`<b>ウォッチ中のパーツ</b><ul>${rows}</ul><p class="meta">この一覧はお使いのブラウザにだけ保存されています。</p>`;}).catch(()=>{});})();
+</script></body></html>

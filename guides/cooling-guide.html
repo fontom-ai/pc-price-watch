@@ -1,0 +1,212 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CPUクーラーとケースファンの選び方：空冷・水冷・エアフローの基本 | PCパーツ底値ウォッチ</title>
+<meta name="description" content="自作PCの冷却を、空冷と簡易水冷の違い、取り付けのチェック、ケースファンの向き、静音のコツまで初心者向けに解説します。"><link rel="canonical" href="https://fontom-ai.github.io/pc-price-watch/guides/cooling-guide.html"><meta property="og:site_name" content="PCパーツ底値ウォッチ"><meta property="og:locale" content="ja_JP"><meta name="twitter:title" content="CPUクーラーとケースファンの選び方：空冷・水冷・エアフローの基本 | PCパーツ底値ウォッチ"><meta name="twitter:description" content="自作PCの冷却を、空冷と簡易水冷の違い、取り付けのチェック、ケースファンの向き、静音のコツまで初心者向けに解説します。"><meta property="og:title" content="CPUクーラーとケースファンの選び方：空冷・水冷・エアフローの基本 | PCパーツ底値ウォッチ"><meta property="og:type" content="website"><meta property="og:description" content="自作PCの冷却を、空冷と簡易水冷の違い、取り付けのチェック、ケースファンの向き、静音のコツまで初心者向けに解説します。"><meta property="og:url" content="https://fontom-ai.github.io/pc-price-watch/guides/cooling-guide.html"><meta property="og:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png"><meta property="og:image:alt" content="CPUクーラーとケースファンの選び方：空冷・水冷・エアフローの基本 | PCパーツ底値ウォッチ"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png">
+<link rel="alternate" type="application/atom+xml" title="値下がり情報" href="../feed.xml">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#14161a;--muted:#5f6670;--line:#e4e7ec;--soft:#f1f3f6;
+--buy:#e8590c;--buy-fg:#fff;--buy-hover:#c94a06;--good:#0b7a53;--good-bg:#e3f5ec;--bad:#b42318;
+--info:#1d4ed8;--info-bg:#e8efff;--pt:#9a3412;--pt-bg:#fff1e6;--pr:#7a5b00;--pr-bg:#fff7db}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#181b21;--fg:#eceef2;--muted:#9aa3ae;
+--line:#2a2f37;--soft:#20242b;--buy:#f76707;--buy-hover:#ff7a1a;--good:#4ade80;--good-bg:#12301f;
+--bad:#f87171;--info:#93b4ff;--info-bg:#18223a;--pt:#fdba74;--pt-bg:#3a2210;--pr:#f3d57a;--pr-bg:#332a0c}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
+main{max-width:1080px;margin:0 auto;padding:0 16px 24px}a{color:var(--info)}
+.hero{padding:18px 0 4px}.hero h1{font-size:24px;line-height:1.3;margin:0 0 4px}
+.hero p{margin:0;color:var(--muted)}.trust{font-size:12px;color:var(--muted);margin:6px 0 0}
+.nav{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;gap:8px;overflow-x:auto}
+.nav a{flex:0 0 auto;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);
+border-radius:99px;padding:6px 14px;font-size:14px}.nav a:hover{border-color:var(--buy)}
+h2{font-size:18px;margin:26px 0 12px;scroll-margin-top:60px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;
+flex-direction:column;gap:10px;scroll-margin-top:60px}.card.pick{border:2px solid var(--buy)}
+.top{display:flex;gap:12px;align-items:flex-start}.thumb{width:88px;height:88px;flex:0 0 88px;border-radius:10px;
+background:#fff;border:1px solid var(--line);object-fit:contain}
+.kind{font-size:12px;color:var(--muted);margin:0}.title{font-size:15px;font-weight:700;margin:2px 0 0;line-height:1.4}
+.title a{color:var(--fg);text-decoration:none}.item{font-size:12.5px;color:var(--muted);margin:4px 0 0;
+display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.price{font-size:28px;font-weight:800;letter-spacing:-.01em;font-variant-numeric:tabular-nums;line-height:1.1}
+.price small{font-size:13px;font-weight:500;color:var(--muted);margin-left:6px}
+.badges{display:flex;flex-wrap:wrap;gap:6px}.b{font-size:12px;border-radius:6px;padding:2px 8px;font-weight:600}
+.b.good{color:var(--good);background:var(--good-bg)}.b.bad{color:var(--bad);background:var(--soft)}
+.b.info{color:var(--info);background:var(--info-bg)}.b.pt{color:var(--pt);background:var(--pt-bg)}
+.b.muted{color:var(--muted);background:var(--soft);font-weight:500}
+.buy{display:block;text-align:center;text-decoration:none;background:var(--buy);color:var(--buy-fg);
+font-weight:700;font-size:16px;border-radius:10px;padding:12px}.buy:hover{background:var(--buy-hover)}
+.buy span{display:block;font-size:12px;font-weight:500;opacity:.9}
+.prline{font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.wbtn{align-self:flex-start;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:99px;
+padding:3px 10px;font-size:12px;cursor:pointer}.wbtn.on{border-color:var(--buy);color:var(--buy)}
+#watchlist:empty{display:none}#watchlist{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:14px 0 0}
+#watchlist li{font-size:14px;margin:4px 0}.amz{color:var(--info);text-decoration:none;font-weight:600}.sale{background:var(--pt-bg);color:var(--pt);border-radius:10px;
+padding:8px 12px;font-size:13px;margin:10px 0 0}.adslot{margin:24px 0}.tip{margin:12px 0 0;font-size:13px}
+details{border-top:1px solid var(--line);padding-top:8px}summary{cursor:pointer;font-size:13px;color:var(--info)}
+.alt{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:6px}
+.alt a{display:flex;justify-content:space-between;gap:10px;text-decoration:none;color:var(--fg);
+background:var(--soft);border-radius:8px;padding:8px 10px;font-size:13px}.alt a:hover{outline:1px solid var(--buy)}
+.alt b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.shopsearch{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}.shopsearch a{background:var(--soft);border-radius:8px;padding:6px 12px;font-size:13px;text-decoration:none;color:var(--fg)}.shopsearch a:hover{outline:1px solid var(--buy)}
+.shops li{margin:8px 0}.more{text-align:right;font-weight:600}.meta{font-size:12px;color:var(--muted)}
+svg{display:block;width:100%;height:140px;color:var(--good);background:var(--card);border-radius:10px}
+.pr{display:inline-block;background:var(--pr-bg);color:var(--pr);border-radius:8px;padding:3px 10px;font-size:12px;margin:8px 0 0}
+.followbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:28px 0 0}
+.followbox p{margin:0;font-weight:700}
+.follow{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}.follow a{font-size:13px;text-decoration:none;
+border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:99px;padding:5px 12px}
+.empty{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;background:var(--card)}
+td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:right}td:first-child,th:first-child{text-align:left}
+.verdict{border-radius:12px;padding:12px 14px;font-weight:600;margin:14px 0 0}
+.verdict.good{background:var(--good-bg);color:var(--good)}.verdict.muted{background:var(--soft);color:var(--muted)}
+.crumbs{margin:0 0 6px}.crumbs a{color:var(--muted)}
+footer{color:var(--muted);font-size:12px;margin:40px 0 0;border-top:1px solid var(--line);padding-top:12px}
+.topbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line)}
+.topbar .brand{font-weight:800;color:var(--fg);text-decoration:none;margin-right:auto}
+.topbar a.m{color:var(--fg);text-decoration:none;font-size:14px}.topbar a.m:hover{color:var(--buy)}
+.enter{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0 4px}
+.enter a{display:block;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);
+border-radius:14px;padding:14px}.enter a:hover{border-color:var(--buy)}.enter b{display:block;font-size:16px}
+.enter span{font-size:13px;color:var(--muted)}
+article.doc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;line-height:1.85}
+article.doc h2{margin-top:28px}article.doc table{margin:10px 0}article.doc li{margin:4px 0}
+.build{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 16px}
+.build h2{margin:0 0 4px}.total{font-size:30px;font-weight:800;margin:6px 0}.build td a{font-size:12px}
+.build td small{color:var(--muted)}.build td:nth-child(2),.build th:nth-child(2){text-align:left}.up{color:var(--bad)}.down{color:var(--good)}
+@media (max-width:520px){.hero h1{font-size:20px}.hero>p:first-of-type{font-size:13px}.price{font-size:26px}
+.grid{grid-template-columns:1fr}.nav{padding:8px 0}}
+</style><script data-goatcounter="https://pcpricewatch.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>var vc_pid = "892715994";</script><script src="//aml.valuecommerce.com/vcdal.js" async></script></head><body><main>
+<header class="topbar"><a class="brand" href="../">PCパーツ底値ウォッチ</a>
+<a class="m" href="../">価格比較</a><a class="m" href="../builds.html">予算別構成</a>
+<a class="m" href="../simulator.html">シミュレーター</a><a class="m" href="../bto.html">自作vsBTO</a><a class="m" href="../guides/">ガイド</a>
+<a class="m" href="../market.html">週間相場</a></header>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "PCパーツ底値ウォッチ", "item": "https://fontom-ai.github.io/pc-price-watch/"}, {"@type": "ListItem", "position": 2, "name": "自作PCガイド", "item": "https://fontom-ai.github.io/pc-price-watch/guides/"}, {"@type": "ListItem", "position": 3, "name": "CPUクーラーとケースファンの選び方：空冷・水冷・エアフローの基本"}]}, {"@type": "Article", "headline": "CPUクーラーとケースファンの選び方：空冷・水冷・エアフローの基本", "description": "自作PCの冷却を、空冷と簡易水冷の違い、取り付けのチェック、ケースファンの向き、静音のコツまで初心者向けに解説します。", "datePublished": "2026-10-02T09:00:00+09:00", "dateModified": "2026-10-02T09:00:00+09:00", "image": ["https://fontom-ai.github.io/pc-price-watch/og/site.png"], "inLanguage": "ja", "author": {"@type": "Organization", "name": "PCパーツ底値ウォッチ", "url": "https://fontom-ai.github.io/pc-price-watch/about.html"}, "publisher": {"@type": "Organization", "name": "PCパーツ底値ウォッチ", "url": "https://fontom-ai.github.io/pc-price-watch/"}}]}</script>
+<div class="hero"><nav class="meta crumbs" aria-label="パンくず"><a href="../">PCパーツ底値ウォッチ</a> ＞ <a href="../guides/">自作PCガイド</a> ＞ CPUクーラーとケースファンの選び方：空冷・水冷・エアフローの基本</nav><h1>CPUクーラーとケースファンの選び方：空冷・水冷・エアフローの基本</h1>
+<p class="meta">公開日 2026-10-02 ・ 最終更新 2026-10-02</p>
+<p>自作PCの冷却を、空冷と簡易水冷の違い、取り付けのチェック、ケースファンの向き、静音のコツまで初心者向けに解説します。</p><p class="pr">【PR】本ページはアフィリエイト広告を利用しています</p></div>
+<article class="doc"><p>PCの冷却は、性能の「保険」のようなものです。CPUやグラボは高温になると、自分を守るために<strong>動作を落とす</strong>（サーマルスロットリング）ため、冷却が足りないと性能が出ません。</p>
+<h2>1. CPUクーラーの種類</h2>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>空冷（サイドフロー）</strong></td>
+<td>ヒートシンクとファンで冷やす。シンプルで、故障しうる部品が少ない。多くのゲーム用途で十分なことが多い</td>
+</tr>
+<tr>
+<td><strong>空冷（ツインタワー）</strong></td>
+<td>ファン2基のものが多く、冷却力が高め。大きく重い</td>
+</tr>
+<tr>
+<td><strong>簡易水冷（AIO）</strong></td>
+<td>冷却力が高く、見た目もすっきり。ポンプなど故障しうる部品が増える</td>
+</tr>
+</tbody>
+</table>
+<p>発熱の大きいCPUでは、冷却力の高いモデルが向きます。当サイトでは<a href="../p/cooler-air.html">空冷CPUクーラー</a>のほか、定番の<a href="../p/cooler-deepcool-ak400.html">DEEPCOOL AK400</a>や、ツインタワーの<a href="../p/cooler-thermalright-pa120se.html">Thermalright Peerless Assassin 120 SE</a>の最安値も追っています。</p>
+<h2>2. 買う前に確認すること</h2>
+<ul>
+<li><strong>対応ソケット</strong>：AM5、LGA1851などに対応しているか。</li>
+<li><strong>高さ</strong>：ケースの「CPUクーラー高さ制限」より低いか。</li>
+<li><strong>メモリとの干渉</strong>：背の高いメモリヒートシンクにクーラーのファンがぶつかることがあります。</li>
+<li><strong>CPUに付属しないことも</strong>：<a href="../p/ryzen7-9800x3d.html">Ryzen 7 9800X3D</a>や<a href="../p/core-ultra7-265k.html">Core Ultra 7 265K</a>などは、クーラーが付属しません。</li>
+</ul>
+<h2>3. 取り付けのチェック</h2>
+<ul>
+<li><strong>底面の保護フィルムを剥がす</strong>：貼られている製品があり、剥がし忘れるとほとんど冷えません。</li>
+<li>グリスは、<strong>適量を</strong>塗ります。多すぎても、少なすぎても冷えにくくなります。製品のマニュアルの指示に従いましょう。</li>
+<li>クーラーのファンの電源は、マザーボードの<strong>CPUファン用ヘッダー</strong>に繋ぎます。</li>
+</ul>
+<h2>4. ケースファンの基本の流れ</h2>
+<p><strong>前面から吸気、背面と上面から排気</strong>が基本です。空気の通り道ができると、冷えやすく、静かにもなりやすくなります。ケースによって、取り付けられるファンの数と位置が違うので、購入前に確認しましょう（<a href="psu-case-guide.html">電源とケースの選び方</a>）。</p>
+<h2>5. 静かなPCにするコツ</h2>
+<ul>
+<li>同じ風量なら、<strong>大きいファンをゆっくり回す</strong>方が静かになりやすいです。ケースファンは120mmや140mmが定番です。</li>
+<li>マザーボードのBIOSで、ファンの回転数を温度に合わせて調整できます。</li>
+<li>回転数をPWM（4ピン）で制御できるファンだと、調整しやすくなります。</li>
+</ul>
+<h2>6. 定期的なメンテナンス</h2>
+<p>ケースのダストフィルターに<strong>ホコリが溜まると、空気が通りにくくなり</strong>、冷却性能が落ちます。数か月に1回を目安に掃除しましょう。</p>
+<h2>7. 冷えないときの確認</h2>
+<ol>
+<li>CPUクーラーの保護フィルムを剥がしたか</li>
+<li>クーラーが正しく固定されているか</li>
+<li>ファンが回っているか（ケーブルの接続）</li>
+<li>ケース内の空気の流れ（吸気と排気のバランス）</li>
+<li>フィルターのホコリ</li>
+</ol>
+<p>組み立ての全体の流れは<a href="assembly-steps.html">組み立て手順</a>をどうぞ。</p></article>
+<h2>この記事で紹介したパーツの最安値</h2><div class="grid"><article class="card" id="cooler-air">
+<div class="top"><img class="thumb" src="https://item-shopping.c.yimg.jp/i/g/excellar_1000033377" alt="空冷CPUクーラー（サイドフロー）" loading="lazy" width="88" height="88"><div><p class="kind">CPUクーラー</p>
+<p class="title"><a href="../p/cooler-air.html">空冷CPUクーラー（サイドフロー）</a></p>
+<p class="item">ID-COOLING 空冷CPUクーラー SE-904-XT BLACK ブラック 爆買</p></div></div>
+<div class="price">¥3,081</div>
+<button type="button" class="wbtn" data-watch="cooler-air" data-name="空冷CPUクーラー（サイドフロー）" data-price="3081">☆ ウォッチ</button>
+<div class="badges"><span class="b good">最安値更新</span><span class="b info">送料無料</span></div>
+<a class="buy" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fexcellar%2F1000033377.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-air/yahoo" data-goatcounter-title="空冷CPUクーラー（サイドフロー）">Yahoo!ショッピングで見る →<span>エクセラー</span></a>
+<div class="prline">PR・楽天市場／Yahoo!ショッピングの新品最安値（取得時点）<a class="amz" href="https://www.amazon.co.jp/s?k=%E7%A9%BA%E5%86%B7CPU%E3%82%AF%E3%83%BC%E3%83%A9%E3%83%BC%EF%BC%88%E3%82%B5%E3%82%A4%E3%83%89%E3%83%95%E3%83%AD%E3%83%BC%EF%BC%89&amp;tag=a0c20-22" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/amazon/空冷CPUクーラー（サイドフロー）">Amazonで探す（PR）</a></div>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00ur6fo.dvi7d0fc.g00ur6fo.dvi7eb8d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsmo-lab%2F00209%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsmo-lab%2Fi%2F10000206%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-air/rakuten" data-goatcounter-title="空冷CPUクーラー（サイドフロー）"><span>スモールラボ 楽天市場店（楽天市場） ・送料無料</span><b>¥3,980</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fgracejasmine%2Fwss-18tirdzjmrln.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-air/yahoo" data-goatcounter-title="空冷CPUクーラー（サイドフロー）"><span>Royall Velluto（Yahoo!ショッピング） ・送料無料</span><b>¥4,213</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00unm6o.dvi7dfd1.g00unm6o.dvi7e8d4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fshopevergreen%2F20250630202346_115%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fshopevergreen%2Fi%2F10081378%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-air/rakuten" data-goatcounter-title="空冷CPUクーラー（サイドフロー）"><span>shopevergreen（楽天市場） ・送料無料</span><b>¥4,401</b></a></li></ul></details>
+<div class="meta">9/27以降の最安 ¥3,081 ・ 10/2 11:31時点 ・ <a href="../p/cooler-air.html">価格推移を見る</a></div>
+</article><article class="card" id="cooler-deepcool-ak400">
+<div class="top"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/dtc/cabinet/mc5063/2531825.jpg?_ex=240x240" alt="DEEPCOOL AK400" loading="lazy" width="88" height="88"><div><p class="kind">CPUクーラー</p>
+<p class="title"><a href="../p/cooler-deepcool-ak400.html">DEEPCOOL AK400</a></p>
+<p class="item">DEEPCOOL CPUクーラー AK400 ブラック R-AK400-BKNNMN-G-1 120mmファン [LGA185…</p></div></div>
+<div class="price">¥3,320</div>
+<button type="button" class="wbtn" data-watch="cooler-deepcool-ak400" data-name="DEEPCOOL AK400" data-price="3320">☆ ウォッチ</button>
+<div class="badges"><span class="b bad">前日比 ▲66円</span><span class="b muted">送料別</span></div>
+<a class="buy" href="https://hb.afl.rakuten.co.jp/hgc/g00pyd1o.dvi7d5d0.g00pyd1o.dvi7e834/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fdtc%2F4537694310567%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fdtc%2Fi%2F13129960%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-deepcool-ak400/rakuten" data-goatcounter-title="DEEPCOOL AK400">楽天市場で見る →<span>ソフマップ楽天市場店</span></a>
+<div class="prline">PR・楽天市場／Yahoo!ショッピングの新品最安値（取得時点）<a class="amz" href="https://www.amazon.co.jp/s?k=DEEPCOOL%20AK400&amp;tag=a0c20-22" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/amazon/DEEPCOOL AK400">Amazonで探す（PR）</a></div>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00r8mvo.dvi7dfbb.g00r8mvo.dvi7e78e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fr-kojima%2F4537694310567%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fr-kojima%2Fi%2F11281332%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-deepcool-ak400/rakuten" data-goatcounter-title="DEEPCOOL AK400"><span>コジマ楽天市場店（楽天市場）</span><b>¥3,320</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00q37io.dvi7dee7.g00q37io.dvi7ee61/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fakibamac%2F4537694310567%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fakibamac%2Fi%2F12652024%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-deepcool-ak400/rakuten" data-goatcounter-title="DEEPCOOL AK400"><span>ソフマップ デジタルコレクション（楽天市場）</span><b>¥3,320</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00r7ldo.dvi7ddad.g00r7ldo.dvi7e75b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbiccamera%2F4537694310567%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fbiccamera%2Fi%2F13762213%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-deepcool-ak400/rakuten" data-goatcounter-title="DEEPCOOL AK400"><span>楽天ビック(ビックカメラ×楽天)（楽天市場）</span><b>¥3,320</b></a></li></ul></details>
+<div class="meta">9/29以降の最安 ¥3,254 ・ 10/2 10:20時点 ・ <a href="../p/cooler-deepcool-ak400.html">価格推移を見る</a></div>
+</article><article class="card" id="cooler-thermalright-pa120se">
+<div class="top"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/jism/cabinet/0100/4573615591097.jpg?_ex=240x240" alt="Thermalright Peerless Assassin 120 SE" loading="lazy" width="88" height="88"><div><p class="kind">CPUクーラー</p>
+<p class="title"><a href="../p/cooler-thermalright-pa120se.html">Thermalright Peerless Assassin 120 SE</a></p>
+<p class="item">Thermalright｜サーマルライト 120mmファン搭載 ツインタワー型 CPUクーラー Peerless Assass…</p></div></div>
+<div class="price">¥4,980</div>
+<button type="button" class="wbtn" data-watch="cooler-thermalright-pa120se" data-name="Thermalright Peerless Assassin 120 SE" data-price="4980">☆ ウォッチ</button>
+<div class="badges"><span class="b good">最安値更新</span><span class="b muted">送料別</span></div>
+<a class="buy" href="https://hb.afl.rakuten.co.jp/hgc/g00pukwo.dvi7dd34.g00pukwo.dvi7efa0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fjism%2F4573615591097-44-72021-n%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fjism%2Fi%2F14869719%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-thermalright-pa120se/rakuten" data-goatcounter-title="Thermalright Peerless Assassin 120 SE">楽天市場で見る →<span>Joshin web 家電とPCの大型専門店</span></a>
+<div class="prline">PR・楽天市場／Yahoo!ショッピングの新品最安値（取得時点）<a class="amz" href="https://www.amazon.co.jp/s?k=Thermalright%20Peerless%20Assassin%20120%20SE&amp;tag=a0c20-22" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/amazon/Thermalright Peerless Assassin 120 SE">Amazonで探す（PR）</a></div>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjoshin%2F4573615591097-44-72021.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-thermalright-pa120se/yahoo" data-goatcounter-title="Thermalright Peerless Assassin 120 SE"><span>Joshin web（Yahoo!ショッピング）</span><b>¥4,980</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00u4s4o.dvi7da41.g00u4s4o.dvi7edc4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frikyu-pudding0601%2Fhr55dd5cfjlgkmx5iuqoebjr4m%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Frikyu-pudding0601%2Fi%2F10086712%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-thermalright-pa120se/rakuten" data-goatcounter-title="Thermalright Peerless Assassin 120 SE"><span>利休プリン（楽天市場） ・送料無料</span><b>¥5,373</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00uksro.dvi7df19.g00uksro.dvi7eb6e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftomy-shopr%2Fblfpiwh6owfryrnjtht7mzmwmm%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Ftomy-shopr%2Fi%2F11273988%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/cooler-thermalright-pa120se/rakuten" data-goatcounter-title="Thermalright Peerless Assassin 120 SE"><span>トミーショップ 楽天市場店（楽天市場） ・送料無料</span><b>¥5,500</b></a></li></ul></details>
+<div class="meta">9/29以降の最安 ¥4,980 ・ 10/2 10:21時点 ・ <a href="../p/cooler-thermalright-pa120se.html">価格推移を見る</a></div>
+</article><article class="card" id="case-midtower">
+<div class="top"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/kaiunshop1/cabinet/ej2606031/ej260603116246_1.jpg?_ex=240x240" alt="ミドルタワー PCケース" loading="lazy" width="88" height="88"><div><p class="kind">ケース</p>
+<p class="title"><a href="../p/case-midtower.html">ミドルタワー PCケース</a></p>
+<p class="item">強化ガラス Micro-ATX/ PCケース ゲーミング ミドルタワーケース</p></div></div>
+<div class="price">¥5,030</div>
+<button type="button" class="wbtn" data-watch="case-midtower" data-name="ミドルタワー PCケース" data-price="5030">☆ ウォッチ</button>
+<div class="badges"><span class="b good">最安値更新</span><span class="b info">送料無料</span></div>
+<a class="buy" href="https://hb.afl.rakuten.co.jp/hgc/g00uvkco.dvi7d1d7.g00uvkco.dvi7e745/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkaiunshop1%2Fej260603116246%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkaiunshop1%2Fi%2F10031922%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/case-midtower/rakuten" data-goatcounter-title="ミドルタワー PCケース">楽天市場で見る →<span>開運ショップ</span></a>
+<div class="prline">PR・楽天市場／Yahoo!ショッピングの新品最安値（取得時点）<a class="amz" href="https://www.amazon.co.jp/s?k=%E3%83%9F%E3%83%89%E3%83%AB%E3%82%BF%E3%83%AF%E3%83%BC%20PC%E3%82%B1%E3%83%BC%E3%82%B9&amp;tag=a0c20-22" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/amazon/ミドルタワー PCケース">Amazonで探す（PR）</a></div>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00uvt9o.dvi7de59.g00uvt9o.dvi7e8cf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsankoshoukai%2Fph260531115435%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsankoshoukai%2Fi%2F10035257%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/case-midtower/rakuten" data-goatcounter-title="ミドルタワー PCケース"><span>サンコー商会（楽天市場） ・送料無料</span><b>¥5,030</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00uvkco.dvi7d1d7.g00uvkco.dvi7e745/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkaiunshop1%2Frl0602218504b9%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkaiunshop1%2Fi%2F10028907%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/case-midtower/rakuten" data-goatcounter-title="ミドルタワー PCケース"><span>開運ショップ（楽天市場） ・送料無料</span><b>¥5,080</b></a></li><li><a href="https://hb.afl.rakuten.co.jp/hgc/g00uvt9o.dvi7de59.g00uvt9o.dvi7e8cf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsankoshoukai%2Fdx260601137275%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fsankoshoukai%2Fi%2F10043722%2F&amp;rafcid=wsc_i_is_84fe94e3-4542-496d-ae14-10623cb4ff5c" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/case-midtower/rakuten" data-goatcounter-title="ミドルタワー PCケース"><span>サンコー商会（楽天市場） ・送料無料</span><b>¥5,130</b></a></li></ul></details>
+<div class="meta">9/27以降の最安 ¥5,030 ・ 10/2 11:31時点 ・ <a href="../p/case-midtower.html">価格推移を見る</a></div>
+</article></div>
+<div class="followbox"><p>値下がりをいち早く知る</p><div class="follow"><a href="https://bsky.app/profile/fontom-watcher.bsky.social" rel="noopener">Blueskyで値下がり速報</a><a href="https://www.threads.com/@fal_philosophy" rel="noopener">Threadsで値下がり速報</a><a href="https://x.com/pcpartswatcher1" rel="noopener">X</a></div></div>
+<footer>
+<p>本ページはアフィリエイト広告（楽天アフィリエイト、バリューコマース）を利用しています。リンク先で購入されると運営者に紹介料が支払われますが、価格や掲載順には影響しません。Amazonのアソシエイトとして、PCパーツ底値ウォッチは適格販売により収入を得ています。</p>
+<p>表示価格は取得時点のもので、現在の価格・在庫・送料とは異なる場合があります。購入前に必ずリンク先のショップでご確認ください。条件（容量・型番など）で自動抽出しているため、まれに対象外の商品が含まれることがあります。</p>
+<p>過去の価格推移は日ごとの最安値のみを保存しています。アクセス解析にGoatCounter（Cookie不使用・個人を特定する情報は収集しません）を利用しています。</p>
+<p><a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener">Supported by Rakuten Developers</a>
+ ・ <a href="https://developer.yahoo.co.jp/sitemap/" target="_blank" rel="noopener">Webサービス by Yahoo! JAPAN</a>
+ ・ <a href="../feed.xml">RSS</a> ・ <a href="../about.html">集計方法・運営者</a>
+ ・ <a href="../data.html">価格データ</a>
+ ・ <a href="../shops.html">提携ショップ</a> ・ <a href="../index-all.html">全ページ一覧</a></p>
+<p>
+ <a href="../privacy.html">プライバシーポリシー</a></p>
+</footer></main><script>
+(function(){const K='pcw-watch';let W={};try{W=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(W))}catch(e){}};
+document.querySelectorAll('.wbtn').forEach(b=>{const s=b.dataset.watch;const on=()=>{b.classList.toggle('on',!!W[s]);b.textContent=W[s]?'★ ウォッチ中':'☆ ウォッチ';};on();
+ b.addEventListener('click',()=>{if(W[s])delete W[s];else W[s]={name:b.dataset.name,price:+b.dataset.price,seen:+b.dataset.price};save();on();});});
+const box=document.getElementById('watchlist');if(!box||!Object.keys(W).length)return;
+fetch(box.dataset.src).then(r=>r.json()).then(P=>{const rows=Object.entries(W).map(([s,w])=>{const p=P[s];if(!p)return '';
+ const d=p.price-w.seen;const t=d<0?`<b class="down">前回見たときより${(-d).toLocaleString()}円安い</b>`:d>0?`<span class="up">前回より${d.toLocaleString()}円高い</span>`:'変化なし';
+ w.seen=p.price;return `<li><a href="${box.dataset.root}p/${s}.html">${w.name}</a>：¥${p.price.toLocaleString()}（${t}）</li>`;}).join('');
+ save();box.innerHTML=`<b>ウォッチ中のパーツ</b><ul>${rows}</ul><p class="meta">この一覧はお使いのブラウザにだけ保存されています。</p>`;}).catch(()=>{});})();
+</script></body></html>

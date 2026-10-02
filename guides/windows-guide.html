@@ -1,0 +1,186 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>自作PCのWindows：入手方法・ライセンスの種類・インストールの流れ | PCパーツ底値ウォッチ</title>
+<meta name="description" content="自作PCにWindowsを入れる方法を、ライセンスの種類（パッケージ版・DSP版）、Windows 11の動作要件、インストールメディアの作り方まで整理しました。"><link rel="canonical" href="https://fontom-ai.github.io/pc-price-watch/guides/windows-guide.html"><meta property="og:site_name" content="PCパーツ底値ウォッチ"><meta property="og:locale" content="ja_JP"><meta name="twitter:title" content="自作PCのWindows：入手方法・ライセンスの種類・インストールの流れ | PCパーツ底値ウォッチ"><meta name="twitter:description" content="自作PCにWindowsを入れる方法を、ライセンスの種類（パッケージ版・DSP版）、Windows 11の動作要件、インストールメディアの作り方まで整理しました。"><meta property="og:title" content="自作PCのWindows：入手方法・ライセンスの種類・インストールの流れ | PCパーツ底値ウォッチ"><meta property="og:type" content="website"><meta property="og:description" content="自作PCにWindowsを入れる方法を、ライセンスの種類（パッケージ版・DSP版）、Windows 11の動作要件、インストールメディアの作り方まで整理しました。"><meta property="og:url" content="https://fontom-ai.github.io/pc-price-watch/guides/windows-guide.html"><meta property="og:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png"><meta property="og:image:alt" content="自作PCのWindows：入手方法・ライセンスの種類・インストールの流れ | PCパーツ底値ウォッチ"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://fontom-ai.github.io/pc-price-watch/og/site.png">
+<link rel="alternate" type="application/atom+xml" title="値下がり情報" href="../feed.xml">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#14161a;--muted:#5f6670;--line:#e4e7ec;--soft:#f1f3f6;
+--buy:#e8590c;--buy-fg:#fff;--buy-hover:#c94a06;--good:#0b7a53;--good-bg:#e3f5ec;--bad:#b42318;
+--info:#1d4ed8;--info-bg:#e8efff;--pt:#9a3412;--pt-bg:#fff1e6;--pr:#7a5b00;--pr-bg:#fff7db}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#181b21;--fg:#eceef2;--muted:#9aa3ae;
+--line:#2a2f37;--soft:#20242b;--buy:#f76707;--buy-hover:#ff7a1a;--good:#4ade80;--good-bg:#12301f;
+--bad:#f87171;--info:#93b4ff;--info-bg:#18223a;--pt:#fdba74;--pt-bg:#3a2210;--pr:#f3d57a;--pr-bg:#332a0c}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
+main{max-width:1080px;margin:0 auto;padding:0 16px 24px}a{color:var(--info)}
+.hero{padding:18px 0 4px}.hero h1{font-size:24px;line-height:1.3;margin:0 0 4px}
+.hero p{margin:0;color:var(--muted)}.trust{font-size:12px;color:var(--muted);margin:6px 0 0}
+.nav{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;gap:8px;overflow-x:auto}
+.nav a{flex:0 0 auto;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);
+border-radius:99px;padding:6px 14px;font-size:14px}.nav a:hover{border-color:var(--buy)}
+h2{font-size:18px;margin:26px 0 12px;scroll-margin-top:60px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;
+flex-direction:column;gap:10px;scroll-margin-top:60px}.card.pick{border:2px solid var(--buy)}
+.top{display:flex;gap:12px;align-items:flex-start}.thumb{width:88px;height:88px;flex:0 0 88px;border-radius:10px;
+background:#fff;border:1px solid var(--line);object-fit:contain}
+.kind{font-size:12px;color:var(--muted);margin:0}.title{font-size:15px;font-weight:700;margin:2px 0 0;line-height:1.4}
+.title a{color:var(--fg);text-decoration:none}.item{font-size:12.5px;color:var(--muted);margin:4px 0 0;
+display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.price{font-size:28px;font-weight:800;letter-spacing:-.01em;font-variant-numeric:tabular-nums;line-height:1.1}
+.price small{font-size:13px;font-weight:500;color:var(--muted);margin-left:6px}
+.badges{display:flex;flex-wrap:wrap;gap:6px}.b{font-size:12px;border-radius:6px;padding:2px 8px;font-weight:600}
+.b.good{color:var(--good);background:var(--good-bg)}.b.bad{color:var(--bad);background:var(--soft)}
+.b.info{color:var(--info);background:var(--info-bg)}.b.pt{color:var(--pt);background:var(--pt-bg)}
+.b.muted{color:var(--muted);background:var(--soft);font-weight:500}
+.buy{display:block;text-align:center;text-decoration:none;background:var(--buy);color:var(--buy-fg);
+font-weight:700;font-size:16px;border-radius:10px;padding:12px}.buy:hover{background:var(--buy-hover)}
+.buy span{display:block;font-size:12px;font-weight:500;opacity:.9}
+.prline{font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.wbtn{align-self:flex-start;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:99px;
+padding:3px 10px;font-size:12px;cursor:pointer}.wbtn.on{border-color:var(--buy);color:var(--buy)}
+#watchlist:empty{display:none}#watchlist{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:14px 0 0}
+#watchlist li{font-size:14px;margin:4px 0}.amz{color:var(--info);text-decoration:none;font-weight:600}.sale{background:var(--pt-bg);color:var(--pt);border-radius:10px;
+padding:8px 12px;font-size:13px;margin:10px 0 0}.adslot{margin:24px 0}.tip{margin:12px 0 0;font-size:13px}
+details{border-top:1px solid var(--line);padding-top:8px}summary{cursor:pointer;font-size:13px;color:var(--info)}
+.alt{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:6px}
+.alt a{display:flex;justify-content:space-between;gap:10px;text-decoration:none;color:var(--fg);
+background:var(--soft);border-radius:8px;padding:8px 10px;font-size:13px}.alt a:hover{outline:1px solid var(--buy)}
+.alt b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.shopsearch{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}.shopsearch a{background:var(--soft);border-radius:8px;padding:6px 12px;font-size:13px;text-decoration:none;color:var(--fg)}.shopsearch a:hover{outline:1px solid var(--buy)}
+.shops li{margin:8px 0}.more{text-align:right;font-weight:600}.meta{font-size:12px;color:var(--muted)}
+svg{display:block;width:100%;height:140px;color:var(--good);background:var(--card);border-radius:10px}
+.pr{display:inline-block;background:var(--pr-bg);color:var(--pr);border-radius:8px;padding:3px 10px;font-size:12px;margin:8px 0 0}
+.followbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:28px 0 0}
+.followbox p{margin:0;font-weight:700}
+.follow{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}.follow a{font-size:13px;text-decoration:none;
+border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:99px;padding:5px 12px}
+.empty{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;background:var(--card)}
+td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:right}td:first-child,th:first-child{text-align:left}
+.verdict{border-radius:12px;padding:12px 14px;font-weight:600;margin:14px 0 0}
+.verdict.good{background:var(--good-bg);color:var(--good)}.verdict.muted{background:var(--soft);color:var(--muted)}
+.crumbs{margin:0 0 6px}.crumbs a{color:var(--muted)}
+footer{color:var(--muted);font-size:12px;margin:40px 0 0;border-top:1px solid var(--line);padding-top:12px}
+.topbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line)}
+.topbar .brand{font-weight:800;color:var(--fg);text-decoration:none;margin-right:auto}
+.topbar a.m{color:var(--fg);text-decoration:none;font-size:14px}.topbar a.m:hover{color:var(--buy)}
+.enter{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0 4px}
+.enter a{display:block;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);
+border-radius:14px;padding:14px}.enter a:hover{border-color:var(--buy)}.enter b{display:block;font-size:16px}
+.enter span{font-size:13px;color:var(--muted)}
+article.doc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;line-height:1.85}
+article.doc h2{margin-top:28px}article.doc table{margin:10px 0}article.doc li{margin:4px 0}
+.build{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 16px}
+.build h2{margin:0 0 4px}.total{font-size:30px;font-weight:800;margin:6px 0}.build td a{font-size:12px}
+.build td small{color:var(--muted)}.build td:nth-child(2),.build th:nth-child(2){text-align:left}.up{color:var(--bad)}.down{color:var(--good)}
+@media (max-width:520px){.hero h1{font-size:20px}.hero>p:first-of-type{font-size:13px}.price{font-size:26px}
+.grid{grid-template-columns:1fr}.nav{padding:8px 0}}
+</style><script data-goatcounter="https://pcpricewatch.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>var vc_pid = "892715994";</script><script src="//aml.valuecommerce.com/vcdal.js" async></script></head><body><main>
+<header class="topbar"><a class="brand" href="../">PCパーツ底値ウォッチ</a>
+<a class="m" href="../">価格比較</a><a class="m" href="../builds.html">予算別構成</a>
+<a class="m" href="../simulator.html">シミュレーター</a><a class="m" href="../bto.html">自作vsBTO</a><a class="m" href="../guides/">ガイド</a>
+<a class="m" href="../market.html">週間相場</a></header>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "PCパーツ底値ウォッチ", "item": "https://fontom-ai.github.io/pc-price-watch/"}, {"@type": "ListItem", "position": 2, "name": "自作PCガイド", "item": "https://fontom-ai.github.io/pc-price-watch/guides/"}, {"@type": "ListItem", "position": 3, "name": "自作PCのWindows：入手方法・ライセンスの種類・インストールの流れ"}]}, {"@type": "Article", "headline": "自作PCのWindows：入手方法・ライセンスの種類・インストールの流れ", "description": "自作PCにWindowsを入れる方法を、ライセンスの種類（パッケージ版・DSP版）、Windows 11の動作要件、インストールメディアの作り方まで整理しました。", "datePublished": "2026-10-02T09:00:00+09:00", "dateModified": "2026-10-02T09:00:00+09:00", "image": ["https://fontom-ai.github.io/pc-price-watch/og/site.png"], "inLanguage": "ja", "author": {"@type": "Organization", "name": "PCパーツ底値ウォッチ", "url": "https://fontom-ai.github.io/pc-price-watch/about.html"}, "publisher": {"@type": "Organization", "name": "PCパーツ底値ウォッチ", "url": "https://fontom-ai.github.io/pc-price-watch/"}}]}</script>
+<div class="hero"><nav class="meta crumbs" aria-label="パンくず"><a href="../">PCパーツ底値ウォッチ</a> ＞ <a href="../guides/">自作PCガイド</a> ＞ 自作PCのWindows：入手方法・ライセンスの種類・インストールの流れ</nav><h1>自作PCのWindows：入手方法・ライセンスの種類・インストールの流れ</h1>
+<p class="meta">公開日 2026-10-02 ・ 最終更新 2026-10-02</p>
+<p>自作PCにWindowsを入れる方法を、ライセンスの種類（パッケージ版・DSP版）、Windows 11の動作要件、インストールメディアの作り方まで整理しました。</p><p class="pr">【PR】本ページはアフィリエイト広告を利用しています</p></div>
+<article class="doc"><p>自作PCには、基本的に<strong>Windowsは付属しません</strong>。OSは別に用意する必要があります。ここでは、入手の方法と、インストールの流れを整理します。<strong>ライセンスの条件は変わることがあるため、購入前に必ずMicrosoftや販売店の最新の案内を確認してください。</strong></p>
+<h2>1. Windows 11の動作要件</h2>
+<p>自作PCで使うパーツが、次の主な要件を満たしている必要があります（Microsoftの公式要件の一部です）。</p>
+<ul>
+<li>64ビット対応のCPU（対応するプロセッサの一覧がMicrosoftから公開されています）</li>
+<li>メモリ4GB以上、ストレージ64GB以上</li>
+<li>UEFI（セキュアブート対応）とTPM 2.0</li>
+</ul>
+<p>最近のマザーボードは、多くがTPM（機能名は「fTPM」「PTT」など）に対応しており、BIOSで有効にする設定が必要な場合があります。</p>
+<h2>2. ライセンスの種類</h2>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>パッケージ版（リテール版）</strong></td>
+<td>単体で購入できる。PCを買い替えたときに、条件を満たせば別のPCで使える場合がある</td>
+</tr>
+<tr>
+<td><strong>DSP版</strong></td>
+<td>特定のパーツ（SSDやメモリなど）と同時に購入する形で販売される。販売店や時期で条件が異なる</td>
+</tr>
+<tr>
+<td><strong>ダウンロード版</strong></td>
+<td>Microsoftや販売店からダウンロードして購入する</td>
+</tr>
+<tr>
+<td><strong>OEM版（メーカー製PCに付属）</strong></td>
+<td>基本的にそのPCに結びついており、別のPCには移せない</td>
+</tr>
+</tbody>
+</table>
+<p>どれを買うかは、予算と、<strong>将来PCを組み替える可能性があるか</strong>で決まります。ライセンスの移行や認証の条件は、必ずMicrosoftの案内で確認してください。</p>
+<h2>3. HomeとProの違い</h2>
+<ul>
+<li><strong>Home</strong>：一般的な家庭向け。</li>
+<li><strong>Pro</strong>：BitLocker（ドライブの暗号化）や、リモートデスクトップで接続を受ける機能などが加わります。</li>
+</ul>
+<p>業務で使う、データを暗号化したいなどの理由がなければ、Homeで足りる人が多くいます。</p>
+<h2>4. インストールメディアを作る</h2>
+<p>Microsoftの公式サイトから、<strong>メディア作成ツール</strong>をダウンロードして、USBメモリにインストール用のメディアを作れます。別のPCで作業し、容量8GB以上のUSBメモリを用意します。</p>
+<ol>
+<li>別のPCでMicrosoftの公式ページからツールを入手して、USBメモリにメディアを作成</li>
+<li>組み立てたPCにUSBメモリを挿して起動（BIOSの起動順を、USBメモリに設定）</li>
+<li>画面の案内に従って、インストール先のSSDを選んでインストール</li>
+<li>インストール後に、ライセンスの認証（プロダクトキーまたはデジタルライセンス）</li>
+</ol>
+<h2>5. インストール先の注意</h2>
+<ul>
+<li><strong>システム用SSDとデータ用SSDを分ける</strong>と、OSを入れ直してもデータを守りやすくなります（<a href="ssd-guide.html">SSDの選び方</a>）。</li>
+<li>インストール時は、データ用のSSDを<strong>いったん外しておく</strong>と、間違えて消すことを防げます。</li>
+</ul>
+<h2>6. インストール後にやること</h2>
+<ol>
+<li>Windows Updateを実行</li>
+<li>マザーボードやグラボの<strong>ドライバー</strong>を、メーカーの公式サイトから入手して更新</li>
+<li>BIOSのメモリ設定（XMP・EXPO）を確認（<a href="memory-guide.html">メモリの選び方</a>）</li>
+<li>バックアップの設定</li>
+</ol>
+<p>組み立てから初回起動までの流れは<a href="assembly-steps.html">組み立て手順</a>で解説しています。古いPCから移行する場合は<a href="pc-migration.html">データ移行と古いPCの処分</a>もどうぞ。</p></article>
+<h2>この記事で紹介したパーツの最安値</h2><div class="grid"><article class="card" id="nvme-1tb">
+<div class="top"><img class="thumb" src="https://item-shopping.c.yimg.jp/i/g/jnhshop_hy8113e30-1tbtn1-eb" alt="NVMe SSD 1TB" loading="lazy" width="88" height="88"><div><p class="kind">SSD</p>
+<p class="title"><a href="../p/nvme-1tb.html">NVMe SSD 1TB</a></p>
+<p class="item">セール Hanye PCIe NVMe M.2 2280 SSD 1TB R:3600MB/s W:3200MB/s PCIe…</p></div></div>
+<div class="price">¥21,600<small>21.6円/GB</small></div>
+<button type="button" class="wbtn" data-watch="nvme-1tb" data-name="NVMe SSD 1TB" data-price="21600">☆ ウォッチ</button>
+<div class="badges"><span class="b bad">高値圏</span><span class="b info">送料無料</span></div>
+<a class="buy" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjnhshop%2Fhy8113e30-1tbtn1-eb.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/nvme-1tb/yahoo" data-goatcounter-title="NVMe SSD 1TB">Yahoo!ショッピングで見る →<span>嘉年華Shop</span></a>
+<div class="prline">PR・楽天市場／Yahoo!ショッピングの新品最安値（取得時点）<a class="amz" href="https://www.amazon.co.jp/s?k=NVMe%20SSD%201TB&amp;tag=a0c20-22" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/amazon/NVMe SSD 1TB">Amazonで探す（PR）</a></div>
+<details><summary>他のショップと比較（3件）</summary><ul class="alt"><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjnh%2Fhy8113e30-1tbtn1-eb.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/nvme-1tb/yahoo" data-goatcounter-title="NVMe SSD 1TB"><span>嘉年華（Yahoo!ショッピング） ・送料無料</span><b>¥21,601</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjnhshop%2Fhy8113e26-1tbtn1-eb.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/nvme-1tb/yahoo" data-goatcounter-title="NVMe SSD 1TB"><span>嘉年華Shop（Yahoo!ショッピング） ・送料無料</span><b>¥21,700</b></a></li><li><a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3782610&amp;pid=892711999&amp;vc_url=https%3A%2F%2Fstore.shopping.yahoo.co.jp%2Fjnh%2Fhy8113e26-1tbtn1-eb.html" rel="sponsored noopener" target="_blank" data-goatcounter-click="out/nvme-1tb/yahoo" data-goatcounter-title="NVMe SSD 1TB"><span>嘉年華（Yahoo!ショッピング） ・送料無料</span><b>¥21,701</b></a></li></ul></details>
+<div class="meta">9/25以降の最安 ¥20,250 ・ 10/2 11:20時点 ・ <a href="../p/nvme-1tb.html">価格推移を見る</a></div>
+</article></div>
+<div class="followbox"><p>値下がりをいち早く知る</p><div class="follow"><a href="https://bsky.app/profile/fontom-watcher.bsky.social" rel="noopener">Blueskyで値下がり速報</a><a href="https://www.threads.com/@fal_philosophy" rel="noopener">Threadsで値下がり速報</a><a href="https://x.com/pcpartswatcher1" rel="noopener">X</a></div></div>
+<footer>
+<p>本ページはアフィリエイト広告（楽天アフィリエイト、バリューコマース）を利用しています。リンク先で購入されると運営者に紹介料が支払われますが、価格や掲載順には影響しません。Amazonのアソシエイトとして、PCパーツ底値ウォッチは適格販売により収入を得ています。</p>
+<p>表示価格は取得時点のもので、現在の価格・在庫・送料とは異なる場合があります。購入前に必ずリンク先のショップでご確認ください。条件（容量・型番など）で自動抽出しているため、まれに対象外の商品が含まれることがあります。</p>
+<p>過去の価格推移は日ごとの最安値のみを保存しています。アクセス解析にGoatCounter（Cookie不使用・個人を特定する情報は収集しません）を利用しています。</p>
+<p><a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener">Supported by Rakuten Developers</a>
+ ・ <a href="https://developer.yahoo.co.jp/sitemap/" target="_blank" rel="noopener">Webサービス by Yahoo! JAPAN</a>
+ ・ <a href="../feed.xml">RSS</a> ・ <a href="../about.html">集計方法・運営者</a>
+ ・ <a href="../data.html">価格データ</a>
+ ・ <a href="../shops.html">提携ショップ</a> ・ <a href="../index-all.html">全ページ一覧</a></p>
+<p>
+ <a href="../privacy.html">プライバシーポリシー</a></p>
+</footer></main><script>
+(function(){const K='pcw-watch';let W={};try{W=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(W))}catch(e){}};
+document.querySelectorAll('.wbtn').forEach(b=>{const s=b.dataset.watch;const on=()=>{b.classList.toggle('on',!!W[s]);b.textContent=W[s]?'★ ウォッチ中':'☆ ウォッチ';};on();
+ b.addEventListener('click',()=>{if(W[s])delete W[s];else W[s]={name:b.dataset.name,price:+b.dataset.price,seen:+b.dataset.price};save();on();});});
+const box=document.getElementById('watchlist');if(!box||!Object.keys(W).length)return;
+fetch(box.dataset.src).then(r=>r.json()).then(P=>{const rows=Object.entries(W).map(([s,w])=>{const p=P[s];if(!p)return '';
+ const d=p.price-w.seen;const t=d<0?`<b class="down">前回見たときより${(-d).toLocaleString()}円安い</b>`:d>0?`<span class="up">前回より${d.toLocaleString()}円高い</span>`:'変化なし';
+ w.seen=p.price;return `<li><a href="${box.dataset.root}p/${s}.html">${w.name}</a>：¥${p.price.toLocaleString()}（${t}）</li>`;}).join('');
+ save();box.innerHTML=`<b>ウォッチ中のパーツ</b><ul>${rows}</ul><p class="meta">この一覧はお使いのブラウザにだけ保存されています。</p>`;}).catch(()=>{});})();
+</script></body></html>
