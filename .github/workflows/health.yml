@@ -1,0 +1,52 @@
+name: health-check
+# The site is refreshed by a Mac at home. When that Mac is off (battery empty, asleep, offline) nothing local can
+# say so. This job runs on GitHub every 3 hours, reads health.json from the live site, and when the data is
+# older than 8 hours it opens an issue and fails the run: GitHub then e-mails the repository owner.
+# When data is fresh again it closes the issue.
+on:
+  schedule:
+    - cron: "23 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      simulate_stale:
+        description: "drill: pretend the data is old, to check that the alert (issue + e-mail) really arrives"
+        type: boolean
+        default: false
+permissions:
+  contents: read
+  issues: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check data freshness
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          url="https://fontom-ai.github.io/pc-price-watch/health.json?t=$(date +%s)"
+          json=$(curl -fsS --max-time 30 "$url" || true)
+          gen=$(printf '%s' "$json" | jq -r '.generated_at // empty' 2>/dev/null || true)
+          if [ "${{ inputs.simulate_stale }}" = "true" ]; then gen="2000-01-01T00:00:00+09:00"; fi
+          stale=0; age_h=""
+          if [ -z "$gen" ]; then
+            stale=1; why="health.json を読み込めませんでした"
+          else
+            age_h=$(( ( $(date +%s) - $(date -d "$gen" +%s) ) / 3600 ))
+            if [ "$age_h" -ge 8 ]; then stale=1; why="最後のデータ更新は ${age_h} 時間前（${gen}）です"; fi
+          fi
+          gh label create stale-data --color B60205 --description "data refresh stopped" --repo "$REPO" 2>/dev/null || true
+          open=$(gh issue list --repo "$REPO" --label stale-data --state open --json number --jq '.[0].number // empty')
+          if [ "$stale" = "1" ]; then
+            echo "STALE: $why"
+            if [ -z "$open" ]; then
+              gh issue create --repo "$REPO" --label stale-data \
+                --title "価格データの自動更新が止まっています" \
+                --body "$why。自宅のMacの電源・スリープ・ネットワークを確認してください（充電器につなぐ、蓋を閉じない）。復旧すると自動でクローズされます。"
+            fi
+            exit 1
+          fi
+          echo "fresh (${age_h}h)"
+          if [ -n "$open" ]; then
+            gh issue close "$open" --repo "$REPO" --comment "データ更新が再開しました（${age_h}時間前に更新）。"
+          fi
